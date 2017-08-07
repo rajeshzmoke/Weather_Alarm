@@ -1,0 +1,350 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7F68D2331F25C04600350964 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F68D2321F25C04600350964 /* AppDelegate.swift */; };
+		7F68D2351F25C04600350964 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F68D2341F25C04600350964 /* ViewController.swift */; };
+		7F68D2381F25C04600350964 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F68D2361F25C04600350964 /* Main.storyboard */; };
+		7F68D23A1F25C04600350964 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F68D2391F25C04600350964 /* Assets.xcassets */; };
+		7F68D23D1F25C04600350964 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F68D23B1F25C04600350964 /* LaunchScreen.storyboard */; };
+		7F68D2451F25C09800350964 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F68D2441F25C09800350964 /* Shape.swift */; };
+		7F7FF24A1F2877A1000DB834 /* CirclePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7FF2491F2877A1000DB834 /* CirclePath.swift */; };
+		7F8974EF1F3870A900395F02 /* Days.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8974EE1F3870A900395F02 /* Days.swift */; };
+		7F8974F11F3876F000395F02 /* PowerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8974F01F3876F000395F02 /* PowerButton.swift */; };
+		7F8974F31F38775500395F02 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8974F21F38775500395F02 /* UIColorExtension.swift */; };
+		7F8974F51F387A0A00395F02 /* MinuteCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8974F41F387A0A00395F02 /* MinuteCircle.swift */; };
+		7F8974F71F387B4400395F02 /* ClockFace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8974F61F387B4400395F02 /* ClockFace.swift */; };
+		7F8974F91F387D1600395F02 /* HourCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8974F81F387D1600395F02 /* HourCircle.swift */; };
+		7FD81CBE1F334D3A00A66C6A /* XMCircleGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD81CBD1F334D3A00A66C6A /* XMCircleGestureRecognizer.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7F68D22F1F25C04500350964 /* AlarmRotate2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlarmRotate2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F68D2321F25C04600350964 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7F68D2341F25C04600350964 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7F68D2371F25C04600350964 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7F68D2391F25C04600350964 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7F68D23C1F25C04600350964 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7F68D23E1F25C04600350964 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F68D2441F25C09800350964 /* Shape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
+		7F7FF2491F2877A1000DB834 /* CirclePath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CirclePath.swift; sourceTree = "<group>"; };
+		7F8974EE1F3870A900395F02 /* Days.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Days.swift; sourceTree = "<group>"; };
+		7F8974F01F3876F000395F02 /* PowerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PowerButton.swift; sourceTree = "<group>"; };
+		7F8974F21F38775500395F02 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		7F8974F41F387A0A00395F02 /* MinuteCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinuteCircle.swift; sourceTree = "<group>"; };
+		7F8974F61F387B4400395F02 /* ClockFace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockFace.swift; sourceTree = "<group>"; };
+		7F8974F81F387D1600395F02 /* HourCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HourCircle.swift; sourceTree = "<group>"; };
+		7FD81CBD1F334D3A00A66C6A /* XMCircleGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMCircleGestureRecognizer.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7F68D22C1F25C04500350964 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7F68D2261F25C04500350964 = {
+			isa = PBXGroup;
+			children = (
+				7F68D2311F25C04500350964 /* AlarmRotate */,
+				7F68D2301F25C04500350964 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7F68D2301F25C04500350964 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7F68D22F1F25C04500350964 /* AlarmRotate2.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7F68D2311F25C04500350964 /* AlarmRotate */ = {
+			isa = PBXGroup;
+			children = (
+				7F8974F61F387B4400395F02 /* ClockFace.swift */,
+				7F68D2321F25C04600350964 /* AppDelegate.swift */,
+				7F68D2341F25C04600350964 /* ViewController.swift */,
+				7F7FF2491F2877A1000DB834 /* CirclePath.swift */,
+				7F68D2441F25C09800350964 /* Shape.swift */,
+				7FD81CBD1F334D3A00A66C6A /* XMCircleGestureRecognizer.swift */,
+				7F68D2361F25C04600350964 /* Main.storyboard */,
+				7F68D2391F25C04600350964 /* Assets.xcassets */,
+				7F68D23B1F25C04600350964 /* LaunchScreen.storyboard */,
+				7F68D23E1F25C04600350964 /* Info.plist */,
+				7F8974EE1F3870A900395F02 /* Days.swift */,
+				7F8974F01F3876F000395F02 /* PowerButton.swift */,
+				7F8974F21F38775500395F02 /* UIColorExtension.swift */,
+				7F8974F41F387A0A00395F02 /* MinuteCircle.swift */,
+				7F8974F81F387D1600395F02 /* HourCircle.swift */,
+			);
+			path = AlarmRotate;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7F68D22E1F25C04500350964 /* AlarmRotate2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F68D2411F25C04600350964 /* Build configuration list for PBXNativeTarget "AlarmRotate2" */;
+			buildPhases = (
+				7F68D22B1F25C04500350964 /* Sources */,
+				7F68D22C1F25C04500350964 /* Frameworks */,
+				7F68D22D1F25C04500350964 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AlarmRotate2;
+			productName = AlarmRotate;
+			productReference = 7F68D22F1F25C04500350964 /* AlarmRotate2.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7F68D2271F25C04500350964 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = user1;
+				TargetAttributes = {
+					7F68D22E1F25C04500350964 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = JLY7ES5426;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 7F68D22A1F25C04500350964 /* Build configuration list for PBXProject "AlarmRotate2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7F68D2261F25C04500350964;
+			productRefGroup = 7F68D2301F25C04500350964 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7F68D22E1F25C04500350964 /* AlarmRotate2 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7F68D22D1F25C04500350964 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F68D23D1F25C04600350964 /* LaunchScreen.storyboard in Resources */,
+				7F68D23A1F25C04600350964 /* Assets.xcassets in Resources */,
+				7F68D2381F25C04600350964 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7F68D22B1F25C04500350964 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F68D2351F25C04600350964 /* ViewController.swift in Sources */,
+				7F8974F51F387A0A00395F02 /* MinuteCircle.swift in Sources */,
+				7F68D2451F25C09800350964 /* Shape.swift in Sources */,
+				7F8974F71F387B4400395F02 /* ClockFace.swift in Sources */,
+				7FD81CBE1F334D3A00A66C6A /* XMCircleGestureRecognizer.swift in Sources */,
+				7F8974F31F38775500395F02 /* UIColorExtension.swift in Sources */,
+				7F7FF24A1F2877A1000DB834 /* CirclePath.swift in Sources */,
+				7F8974F11F3876F000395F02 /* PowerButton.swift in Sources */,
+				7F8974F91F387D1600395F02 /* HourCircle.swift in Sources */,
+				7F8974EF1F3870A900395F02 /* Days.swift in Sources */,
+				7F68D2331F25C04600350964 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7F68D2361F25C04600350964 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F68D2371F25C04600350964 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7F68D23B1F25C04600350964 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F68D23C1F25C04600350964 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7F68D23F1F25C04600350964 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7F68D2401F25C04600350964 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7F68D2421F25C04600350964 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = JLY7ES5426;
+				INFOPLIST_FILE = AlarmRotate/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hpsw.AlarmRotate2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		7F68D2431F25C04600350964 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = JLY7ES5426;
+				INFOPLIST_FILE = AlarmRotate/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hpsw.AlarmRotate2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7F68D22A1F25C04500350964 /* Build configuration list for PBXProject "AlarmRotate2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F68D23F1F25C04600350964 /* Debug */,
+				7F68D2401F25C04600350964 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F68D2411F25C04600350964 /* Build configuration list for PBXNativeTarget "AlarmRotate2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F68D2421F25C04600350964 /* Debug */,
+				7F68D2431F25C04600350964 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7F68D2271F25C04500350964 /* Project object */;
+}
