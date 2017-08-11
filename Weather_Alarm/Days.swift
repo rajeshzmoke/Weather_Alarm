@@ -19,9 +19,6 @@ class Days: UIView
     var friButton =  UIButton()
     var satButton =  UIButton()
 
-   
-    
-    
     var sunText = CATextLayer()
     var monText = CATextLayer()
     var tueText = CATextLayer()
@@ -37,18 +34,14 @@ class Days: UIView
         super.init(frame: frame)
         self.isUserInteractionEnabled = true
         //self.layer.backgroundColor = UIColor.clear.cgColor
-        
-        
+
         sunButton.backgroundColor = .clear
 //        sunButton.setTitle("Sun", for: .normal)
 //        sunButton.setTitleColor(.black, for: .normal)
         sunButton.showsTouchWhenHighlighted = true
-
         buttonArray.append(sunButton)
         sunButton.clipsToBounds = true
-        
-        
-        
+
         monButton.backgroundColor = .clear
        // monButton.alpha = 0.5
        // monButton.setTitle("Mon", for: .normal)
@@ -56,14 +49,11 @@ class Days: UIView
         //addTarget(self, action: #selector(clicked), for: UIControlEvents.touchUpInside)
        buttonArray.append(monButton)
         
-        
-        
         tueButton.backgroundColor = .clear
         //tueButton.setTitle("Tue", for: .normal)
        // tueButton.addTarget(self, action: #selector(clicked), for: UIControlEvents.touchUpInside)
         buttonArray.append(tueButton)
         tueButton.showsTouchWhenHighlighted = true
-        
         
         wedButton.backgroundColor = .clear
         wedButton.showsTouchWhenHighlighted = true
@@ -86,7 +76,7 @@ class Days: UIView
         satButton.showsTouchWhenHighlighted = true
         buttonArray.append(satButton)
         
-        
+
         
         
         self.addSubview(sunButton)
@@ -96,19 +86,13 @@ class Days: UIView
         self.addSubview(thurButton)
         self.addSubview(friButton)
         self.addSubview(satButton)
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-   
-    func clicked()
-    {
-        print("hello rajesh")
-        tueButton.backgroundColor = .blue
-    }
 
-    
     func callingrajesh()
     {
         print("hello rajesh")
@@ -143,42 +127,9 @@ class Days: UIView
         satButton.frame = CGRect(x: 0.0 ,y: 0.0, width: buttonsize, height: buttonsize)
         satButton.center = CGPoint(x: self.frame.size.width*0.81, y: self.frame.size.height*0.35)
 
+       
     }
 
-    
-    // CGPoint(x: self.frame.size.width*0.45+(self.frame.size.width*0.412), y: self.frame.size.height*0.18)
-    override func draw(_ rect: CGRect)
-    {
-        //sunday
-       // sunLayer = setShapeLayer(shapeLayer: sunLayer, button: sunButton, day: "Sun")
-      // sunButton.layer.addSublayer(sunLayer)
-        //sunText =  setDay(txt: sunText, button: sunButton, day: "Sun")
-//
-//        
-//        //monday
-//        monLayer = setShapeLayer(shapeLayer: monLayer, button: monButton, day: "mon")
-//        let path4 = UIBezierPath(arcCenter: CGPoint(x: self.frame.size.width*0.425,y: self.frame.size.height*0.3), radius: self.frame.size.width*0.415, startAngle: CGFloat(Double.pi + Double.pi*23/180), endAngle: CGFloat(Double.pi + Double.pi*42/180), clockwise: true)
-//        monLayer.path = path4.cgPath
-//        //monText = setDay(txt: monText, button: monButton, day: "Mon")
-//        
-////        monText.fontSize = CGFloat(18)
-////        monText.setAffineTransform(CGAffineTransform(rotationAngle: CGFloat(3*Double.pi/2)))
-////        monText.string = "Mon"
-////        monText.alignmentMode = String(kCAAlignmentRight)
-////        monText.frame = CGRect(x: monButton.frame.width*0.3-20, y:  monButton.frame.size.height*0.3, width: monButton.frame.size.width*0.3, height: monButton.frame.size.height*0.3)
-////        monButton.layer.addSublayer(monText)
-//        
-//
-//        
-//        //saturday
-//        satLayer = setShapeLayer(shapeLayer: satLayer, button: satButton, day: "Sat")
-//        let path9 = UIBezierPath(arcCenter: CGPoint(x: self.frame.size.width*0.22-(self.frame.size.width*0.5),y: self.frame.size.height*0.28), radius: self.frame.size.width*0.40, startAngle: CGFloat(Double.pi + Double.pi*138/180), endAngle: CGFloat(Double.pi + Double.pi*158/180), clockwise: true)
-//        satLayer.path = path9.cgPath
-//        satText = setDay(txt: satText, button: satButton, day: "Sat")
-//
-//        
-    }
-    
     
     func setShapeLayer(shapeLayer: CAShapeLayer!,button: UIButton!,day: String) -> CAShapeLayer
     {

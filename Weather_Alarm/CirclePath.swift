@@ -15,7 +15,8 @@ class CirclePath: UIView {
     var powerButton = PowerButton()
     var days = Days()
     var shapes = Shapes()
-  
+    var returnButton = ReturnButton()
+    
     override init(frame: CGRect)
     {
         super.init(frame: frame)
@@ -25,13 +26,11 @@ class CirclePath: UIView {
         shapes.backgroundColor = .cyan
         addSubview(shapes)
         
-       
-        
         days.backgroundColor = .clear
         days.clipsToBounds = true
         addSubview(days)
 
-        minCircle.backgroundColor = .red
+        minCircle.backgroundColor = .clear
         minCircle.clipsToBounds = true
         addSubview(minCircle)
         
@@ -42,6 +41,8 @@ class CirclePath: UIView {
         powerButton.backgroundColor = .clear
         addSubview(powerButton)
         
+        returnButton.backgroundColor = .clear
+        addSubview(returnButton)
      
 
         
@@ -88,8 +89,8 @@ class CirclePath: UIView {
                 hourCircle.layer.cornerRadius = hourCircle.frame.size.width*0.5
                 
                 
-                powerButton.frame = CGRect(x: 0.0, y: 0.0, width: self.frame.size.width, height:self.frame.size.width)
-                powerButton.center = CGPoint(x: self.frame.size.width*0.5, y: self.frame.size.height*0.5)
+                powerButton.frame = CGRect(x: 0.0, y: 0.0, width: self.frame.size.width*0.55, height:self.frame.size.width*0.2)
+                powerButton.center = CGPoint(x: self.frame.midX + self.frame.midX*0.4, y: self.frame.size.height*0.5)
 
     
         }
@@ -106,6 +107,10 @@ class CirclePath: UIView {
             
          shapes.frame = CGRect(x: 0.0, y: 0.0, width: self.frame.size.width, height: self.frame.size.height)
             shapes.center = CGPoint(x: self.frame.size.width*0.5, y: self.frame.size.height*0.5)
+            
+        returnButton.frame = CGRect(x: 0.0, y: 0.0, width: self.frame.size.width*0.15, height: self.frame.size.width*0.15)
+            returnButton.center = CGPoint(x: self.frame.size.width*0.15, y: self.frame.size.height*0.65)
+            returnButton.layer.cornerRadius = returnButton.frame.size.width*0.5
     }
     }
     

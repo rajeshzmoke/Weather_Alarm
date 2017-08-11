@@ -21,6 +21,7 @@
 		0CAFAFE51F39E001007EBB26 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAFAFE41F39E001007EBB26 /* Weather.swift */; };
 		0CAFAFE71F39E04C007EBB26 /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAFAFE61F39E04C007EBB26 /* Circle.swift */; };
 		0CAFAFE91F39E08F007EBB26 /* BaseCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAFAFE81F39E08F007EBB26 /* BaseCircle.swift */; };
+		7F6446E81F3DB9C50044B58E /* ReturnButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6446E71F3DB9C50044B58E /* ReturnButton.swift */; };
 		7F7618EE1F3C3708005BE6AC /* XMCircleGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7618ED1F3C3708005BE6AC /* XMCircleGestureRecognizer.swift */; };
 		7F7618F01F3C373C005BE6AC /* ClockFace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7618EF1F3C373C005BE6AC /* ClockFace.swift */; };
 		7F7618F21F3C375C005BE6AC /* CirclePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7618F11F3C375C005BE6AC /* CirclePath.swift */; };
@@ -70,6 +71,7 @@
 		0CAFAFE41F39E001007EBB26 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		0CAFAFE61F39E04C007EBB26 /* Circle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Circle.swift; sourceTree = "<group>"; };
 		0CAFAFE81F39E08F007EBB26 /* BaseCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCircle.swift; sourceTree = "<group>"; };
+		7F6446E71F3DB9C50044B58E /* ReturnButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReturnButton.swift; sourceTree = "<group>"; };
 		7F7618ED1F3C3708005BE6AC /* XMCircleGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XMCircleGestureRecognizer.swift; path = AlarmRotate/XMCircleGestureRecognizer.swift; sourceTree = "<group>"; };
 		7F7618EF1F3C373C005BE6AC /* ClockFace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockFace.swift; sourceTree = "<group>"; };
 		7F7618F11F3C375C005BE6AC /* CirclePath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CirclePath.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				7F7618F71F3C376A005BE6AC /* Days.swift */,
 				7FF0C3281F3C6BF900D226EA /* Shapes.swift */,
 				7F7618F91F3C376F005BE6AC /* PowerButton.swift */,
+				7F6446E71F3DB9C50044B58E /* ReturnButton.swift */,
 			);
 			name = AlarmView;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				7F7618F21F3C375C005BE6AC /* CirclePath.swift in Sources */,
 				7FF0C3291F3C6BF900D226EA /* Shapes.swift in Sources */,
 				7F7618F41F3C3763005BE6AC /* MinuteCircle.swift in Sources */,
+				7F6446E81F3DB9C50044B58E /* ReturnButton.swift in Sources */,
 				0CAFAFE31F39DFDA007EBB26 /* NSShadowExtension.swift in Sources */,
 				0CAFAFAA1F39DEF1007EBB26 /* AppDelegate.swift in Sources */,
 				0CAFAFE51F39E001007EBB26 /* Weather.swift in Sources */,

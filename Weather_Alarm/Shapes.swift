@@ -252,3 +252,30 @@ sunBorder.path = path11.cgPath
     }
     
 }
+
+
+
+
+//override func draw(_ rect: CGRect)
+//{
+//    //sunday
+//     sunLayer = setShapeLayer(shapeLayer: sunLayer, button: sunButton, day: "Sun")
+//     sunButton.layer.addSublayer(sunLayer)
+//    sunText =  setDay(txt: sunText, button: sunButton, day: "Sun")
+//    
+//    
+//           //monday
+//            monLayer = setShapeLayer(shapeLayer: monLayer, button: monButton, day: "mon")
+//            let path4 = UIBezierPath(arcCenter: CGPoint(x: self.frame.size.width*0.425,y: self.frame.size.height*0.3), radius: self.frame.size.width*0.415, startAngle: CGFloat(Double.pi + Double.pi*23/180), endAngle: CGFloat(Double.pi + Double.pi*42/180), clockwise: true)
+//            monLayer.path = path4.cgPath
+//            monText = setDay(txt: monText, button: monButton, day: "Mon")
+//    
+//            monText.fontSize = CGFloat(18)
+//            monText.setAffineTransform(CGAffineTransform(rotationAngle: CGFloat(3*Double.pi/2)))
+//            monText.string = "Mon"
+//            monText.alignmentMode = String(kCAAlignmentRight)
+//            monText.frame = CGRect(x: monButton.frame.width*0.3-20, y:  monButton.frame.size.height*0.3, width: monButton.frame.size.width*0.3, height: monButton.frame.size.height*0.3)
+//            monButton.layer.addSublayer(monText)
+//    
+//}
+
