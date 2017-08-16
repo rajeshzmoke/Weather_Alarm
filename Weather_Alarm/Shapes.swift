@@ -32,11 +32,16 @@ class  Shapes:UIView  {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.isUserInteractionEnabled = true
-
+        
+        sunLayer.strokeColor = UIColor.hexStringToUIColor(hex: "#16232B").cgColor
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func setColor(){
+        sunLayer.strokeColor = UIColor.cyan.cgColor
     }
     
     override func layoutSubviews() {
@@ -53,7 +58,7 @@ class  Shapes:UIView  {
         sunLayer.path = path1.cgPath
         sunLayer.lineWidth = self.frame.size.width*0.1
        // sunLayer.fillColor = UIColor.black.cgColor
-        sunLayer.strokeColor = UIColor.hexStringToUIColor(hex: "#424D4F").cgColor
+        
 
         
       layer.addSublayer(sunBorder)
@@ -68,7 +73,7 @@ sunBorder.path = path11.cgPath
         monLayer.path = path2.cgPath
         monLayer.lineWidth = self.frame.size.width*0.1
         monLayer.fillColor = UIColor.clear.cgColor
-        monLayer.strokeColor = UIColor.hexStringToUIColor(hex: "#424D4F").cgColor
+        monLayer.strokeColor = UIColor.hexStringToUIColor(hex: "#16232B").cgColor
 
         
         layer.addSublayer(monBorder)
@@ -84,7 +89,7 @@ sunBorder.path = path11.cgPath
         tueLayer.path = path3.cgPath
         tueLayer.lineWidth = self.frame.size.width*0.1
         tueLayer.fillColor = UIColor.clear.cgColor
-        tueLayer.strokeColor = UIColor.hexStringToUIColor(hex: "#424D4F").cgColor
+        tueLayer.strokeColor = UIColor.hexStringToUIColor(hex: "#16232B").cgColor
 
         
         layer.addSublayer(tueBorder)
@@ -99,7 +104,7 @@ sunBorder.path = path11.cgPath
         wedLayer.path = path4.cgPath
         wedLayer.lineWidth = self.frame.size.width*0.1
         wedLayer.fillColor = UIColor.clear.cgColor
-        wedLayer.strokeColor = UIColor.hexStringToUIColor(hex: "#424D4F").cgColor
+        wedLayer.strokeColor = UIColor.hexStringToUIColor(hex: "#16232B").cgColor
 
         
         layer.addSublayer(wedBorder)
@@ -114,7 +119,7 @@ sunBorder.path = path11.cgPath
         thuLayer.path = path5.cgPath
         thuLayer.lineWidth = self.frame.size.width*0.1
         thuLayer.fillColor = UIColor.clear.cgColor
-        thuLayer.strokeColor = UIColor.hexStringToUIColor(hex: "#424D4F").cgColor
+        thuLayer.strokeColor = UIColor.hexStringToUIColor(hex: "#16232B").cgColor
  
         
         layer.addSublayer(thurBorder)
@@ -129,8 +134,8 @@ sunBorder.path = path11.cgPath
         friLayer.path = path6.cgPath
         friLayer.lineWidth = self.frame.size.width*0.1
         friLayer.fillColor = UIColor.clear.cgColor
-        friLayer.strokeColor = UIColor.hexStringToUIColor(hex: "#424D4F").cgColor
-        //bringSubview(toFront: friLabel)
+        friLayer.strokeColor = UIColor.hexStringToUIColor(hex: "#16232B").cgColor
+
         
         layer.addSublayer(friBorder)
         let path16 = UIBezierPath(arcCenter: CGPoint(x:  self.frame.size.width*0.5, y: self.frame.size.height*0.5), radius: self.frame.size.width*0.45, startAngle: CGFloat(ClockFace.degree2radian(a: 285)), endAngle: CGFloat(ClockFace.degree2radian(a: 305)), clockwise: true)
@@ -144,7 +149,7 @@ sunBorder.path = path11.cgPath
         satLayer.path = path7.cgPath
         satLayer.lineWidth = self.frame.size.width*0.1
         satLayer.fillColor = UIColor.clear.cgColor
-        satLayer.strokeColor = UIColor.hexStringToUIColor(hex: "#424D4F").cgColor
+        satLayer.strokeColor = UIColor.hexStringToUIColor(hex: "#16232B").cgColor
   
         
         layer.addSublayer(satBorder)

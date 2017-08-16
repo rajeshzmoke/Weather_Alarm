@@ -15,7 +15,7 @@ class ReturnButton: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        returnButton.backgroundColor = UIColor.hexStringToUIColor(hex: "#424D4F")
+        returnButton.backgroundColor = UIColor.hexStringToUIColor(hex: "#16232B")
         returnButton.setTitle("<-", for: .normal)
         returnButton.setTitleColor(UIColor.white, for: .normal)
         returnButton.showsTouchWhenHighlighted = true

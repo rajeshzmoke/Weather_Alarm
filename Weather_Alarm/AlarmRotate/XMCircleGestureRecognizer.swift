@@ -30,6 +30,8 @@ extension CGFloat {
 
 class XMCircleGestureRecognizer: UIGestureRecognizer {
     
+    var instanceRef: String?
+    
     /* PUBLIC VARS */
     static var crntPoint: CGPoint?
     // midpoint for gesture recognizer
@@ -90,17 +92,18 @@ class XMCircleGestureRecognizer: UIGestureRecognizer {
     /* PUBLIC METHODS */
    
     // designated initializer
-    init(midPoint:CGPoint, innerRadius:CGFloat?, outerRadius:CGFloat?, target:AnyObject?, action:Selector) {
+    init(midPoint:CGPoint, innerRadius:CGFloat?, outerRadius:CGFloat?,instanceRef:String , target:AnyObject?, action:Selector) {
         super.init(target: target, action: action)
         
         self.midPoint = midPoint
         self.innerRadius = innerRadius
         self.outerRadius = outerRadius
+        self.instanceRef = instanceRef
     }
     
     // convinience initializer if innerRadius and OuterRadius are not necessary
     convenience init(midPoint:CGPoint, target:AnyObject?, action:Selector) {
-        self.init(midPoint:midPoint, innerRadius:nil, outerRadius:nil, target:target, action:action)
+        self.init(midPoint:midPoint, innerRadius:nil, outerRadius:nil ,instanceRef:" ", target:target, action:action)
     }
     
     
