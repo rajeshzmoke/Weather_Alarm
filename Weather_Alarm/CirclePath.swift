@@ -94,7 +94,7 @@ class CirclePath: UIView {
 
     
         }
-        
+    
             
         minCircle.backgroundColor = UIColor.hexStringToUIColor(hex: "#1E282A")
         minCircle.clipsToBounds = true
@@ -113,7 +113,7 @@ class CirclePath: UIView {
             returnButton.layer.cornerRadius = returnButton.frame.size.width*0.5
     }
     }
-    
+
     override func draw(_ rect: CGRect)
     {
         //MinCircle

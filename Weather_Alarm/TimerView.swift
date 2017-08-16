@@ -69,6 +69,7 @@ class TimerView: UIView
         updatetime()
         
         
+        
         self.addSubview(year)
         self.addSubview(time)
         self.addSubview(hourAmPm)

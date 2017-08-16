@@ -30,8 +30,10 @@ class PowerButton: UIView
         
         
         setButton.showsTouchWhenHighlighted = true
-        setButton.setTitle("Set", for: .normal)
-        setButton.setTitleColor(UIColor.white, for: .normal)
+//        setButton.setTitle("Set", for: .normal)
+//        setButton.setTitleColor(UIColor.white, for: .normal)
+        setButton.setImage(#imageLiteral(resourceName: "power"), for: .normal)
+        setButton.contentMode = UIViewContentMode.scaleAspectFit
         setButton.backgroundColor = UIColor.hexStringToUIColor(hex: "#2385D9")
         setButton.layer.shadowOpacity = 0.7
         setButton.layer.shadowRadius = 5
@@ -54,12 +56,13 @@ class PowerButton: UIView
         fatalError("init(coder:) has not been implemented")
     }
     
+
     override func layoutSubviews()
     {
         self.isUserInteractionEnabled = true
         
         //Button round
-        setButton.frame=CGRect(x: 0, y: 0 ,width: self.frame.size.width*0.45, height: self.frame.size.width*0.45)
+        setButton.frame=CGRect(x: 0, y: 0 ,width: self.frame.size.width*0.4, height: self.frame.size.width*0.4)
         setButton.center = CGPoint(x: self.frame.size.width*0.15, y: self.frame.size.height*0.5)
         setButton.layer.cornerRadius = (setButton.frame.size.width)*0.5
         

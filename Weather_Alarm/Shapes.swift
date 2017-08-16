@@ -27,71 +27,12 @@ class  Shapes:UIView  {
     var thurBorder = CAShapeLayer()
     var friBorder = CAShapeLayer()
     var satBorder = CAShapeLayer()
-    
-    var sunLabel = UILabel()
-     var monLabel = UILabel()
-     var tueLabel = UILabel()
-     var wedLabel = UILabel()
-     var thurLabel = UILabel()
-     var friLabel = UILabel()
-     var satLabel = UILabel()
-    
+
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.isUserInteractionEnabled = true
-        
-        
-        sunLabel.backgroundColor = .clear
-        sunLabel.text = "Sun"
-        sunLabel.textColor = .white
-        sunLabel.transform = CGAffineTransform(rotationAngle: ClockFace.degree2radian(a: 270))
-        sunLabel.textAlignment  = .center
-        self.addSubview(sunLabel)
-        
-        monLabel.backgroundColor = .clear
-        monLabel.textAlignment  = .center
-        monLabel.text = "Mon"
-        monLabel.textColor = .white
-        monLabel.transform = CGAffineTransform(rotationAngle: -CGFloat(Double.pi/2))
-        monLabel.frame=CGRect(x: 0.0, y: 0.0, width: self.frame.size.width*0.14,height: self.frame.size.width*0.14)
-        self.addSubview(monLabel)
-        
-        tueLabel.backgroundColor = .clear
-        tueLabel.text = "Tue"
-        tueLabel.textColor = .white
-       // tueLabel.transform = CGAffineTransform(rotationAngle:100)
-        tueLabel.textAlignment  = .center
-        self.addSubview(tueLabel)
-        
-        wedLabel.backgroundColor = .clear
-        wedLabel.text = "Wed"
-        wedLabel.textColor = .white
-        //wedLabel.transform = CGAffineTransform(rotationAngle: ClockFace.degree2radian(a: 270))
-        wedLabel.textAlignment  = .center
-       self.addSubview(wedLabel)
-        
-        
-        thurLabel.backgroundColor = .clear
-        thurLabel.text = "Thur"
-        thurLabel.textColor = .white
-        //thurLabel.transform = CGAffineTransform(rotationAngle: ClockFace.degree2radian(a: 270))
-        thurLabel.textAlignment  = .center
-        self.addSubview(thurLabel)
-        
-        friLabel.backgroundColor = .clear
-        friLabel.text = "Fri"
-        friLabel.textColor = .white
-       // friLabel.transform = CGAffineTransform(rotationAngle: ClockFace.degree2radian(a: 270))
-        friLabel.textAlignment  = .center
-        self.addSubview(friLabel)
-        
-        satLabel.backgroundColor = .clear
-        satLabel.text = "Sat"
-        satLabel.textColor = .white
-        //satLabel.transform = CGAffineTransform(rotationAngle: ClockFace.degree2radian(a: 270))
-        satLabel.textAlignment  = .center
-        self.addSubview(satLabel)
+
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -101,29 +42,7 @@ class  Shapes:UIView  {
     override func layoutSubviews() {
         super.layoutSubviews()
         self.isUserInteractionEnabled = true
-        
-        let labelSize  = self.frame.size.width*0.14
-        
-        sunLabel.frame=CGRect(x: 0.0, y: 0.0, width: labelSize,height: labelSize)
-        sunLabel.center = CGPoint(x: self.frame.size.width*0.1, y: self.frame.size.height*0.5)
-        
-        monLabel.frame=CGRect(x: 0.0, y: 0.0, width: labelSize,height: labelSize)
-        monLabel.center = CGPoint(x: self.frame.size.width*0.13, y: self.frame.size.height*0.41)
-        
-        tueLabel.frame=CGRect(x: 0.0, y: 0.0, width: labelSize,height: labelSize)
-        tueLabel.center = CGPoint(x: self.frame.size.width*0.22, y: self.frame.size.height*0.34)
-        
-        wedLabel.frame=CGRect(x: 0.0, y: 0.0, width: labelSize,height: labelSize)
-        wedLabel.center = CGPoint(x: self.frame.size.width*0.35, y: self.frame.size.height*0.29)
-        
-        thurLabel.frame=CGRect(x: 0.0, y: 0.0, width: labelSize,height: labelSize)
-        thurLabel.center = CGPoint(x: self.frame.size.width*0.52, y: self.frame.size.height*0.28)
-        
-        friLabel.frame=CGRect(x: 0.0, y: 0.0, width: labelSize,height: labelSize)
-        friLabel.center = CGPoint(x: self.frame.size.width*0.67, y: self.frame.size.height*0.29)
-        
-        satLabel.frame=CGRect(x: 0.0, y: 0.0, width: labelSize,height: labelSize)
-        satLabel.center = CGPoint(x: self.frame.size.width*0.80, y: self.frame.size.height*0.35)
+
        
     }
     
@@ -135,7 +54,7 @@ class  Shapes:UIView  {
         sunLayer.lineWidth = self.frame.size.width*0.1
        // sunLayer.fillColor = UIColor.black.cgColor
         sunLayer.strokeColor = UIColor.hexStringToUIColor(hex: "#424D4F").cgColor
-        bringSubview(toFront: sunLabel)
+
         
       layer.addSublayer(sunBorder)
         let path11 = UIBezierPath(arcCenter: CGPoint(x:  self.frame.size.width*0.5, y: self.frame.size.height*0.5), radius: self.frame.size.width*0.45, startAngle: CGFloat(ClockFace.degree2radian(a: 170)), endAngle: CGFloat(ClockFace.degree2radian(a: 190)), clockwise: true)
@@ -150,7 +69,7 @@ sunBorder.path = path11.cgPath
         monLayer.lineWidth = self.frame.size.width*0.1
         monLayer.fillColor = UIColor.clear.cgColor
         monLayer.strokeColor = UIColor.hexStringToUIColor(hex: "#424D4F").cgColor
-        bringSubview(toFront: monLabel)
+
         
         layer.addSublayer(monBorder)
         let path12 = UIBezierPath(arcCenter: CGPoint(x:  self.frame.size.width*0.5, y: self.frame.size.height*0.5), radius: self.frame.size.width*0.45, startAngle: CGFloat(ClockFace.degree2radian(a: 192)), endAngle: CGFloat(ClockFace.degree2radian(a: 212)), clockwise: true)
@@ -166,7 +85,7 @@ sunBorder.path = path11.cgPath
         tueLayer.lineWidth = self.frame.size.width*0.1
         tueLayer.fillColor = UIColor.clear.cgColor
         tueLayer.strokeColor = UIColor.hexStringToUIColor(hex: "#424D4F").cgColor
-        bringSubview(toFront: tueLabel)
+
         
         layer.addSublayer(tueBorder)
         let path13 = UIBezierPath(arcCenter: CGPoint(x:  self.frame.size.width*0.5, y: self.frame.size.height*0.5), radius: self.frame.size.width*0.45, startAngle: CGFloat(ClockFace.degree2radian(a: 215)), endAngle: CGFloat(ClockFace.degree2radian(a: 235)), clockwise: true)
@@ -181,7 +100,7 @@ sunBorder.path = path11.cgPath
         wedLayer.lineWidth = self.frame.size.width*0.1
         wedLayer.fillColor = UIColor.clear.cgColor
         wedLayer.strokeColor = UIColor.hexStringToUIColor(hex: "#424D4F").cgColor
-        bringSubview(toFront: wedLabel)
+
         
         layer.addSublayer(wedBorder)
         let path14 = UIBezierPath(arcCenter: CGPoint(x:  self.frame.size.width*0.5, y: self.frame.size.height*0.5), radius: self.frame.size.width*0.45, startAngle: CGFloat(ClockFace.degree2radian(a: 238)), endAngle: CGFloat(ClockFace.degree2radian(a: 260)), clockwise: true)
@@ -196,7 +115,7 @@ sunBorder.path = path11.cgPath
         thuLayer.lineWidth = self.frame.size.width*0.1
         thuLayer.fillColor = UIColor.clear.cgColor
         thuLayer.strokeColor = UIColor.hexStringToUIColor(hex: "#424D4F").cgColor
-        bringSubview(toFront: thurLabel)
+ 
         
         layer.addSublayer(thurBorder)
         let path15 = UIBezierPath(arcCenter: CGPoint(x:  self.frame.size.width*0.5, y: self.frame.size.height*0.5), radius: self.frame.size.width*0.45, startAngle: CGFloat(ClockFace.degree2radian(a: 263)), endAngle: CGFloat(ClockFace.degree2radian(a: 283)), clockwise: true)
@@ -211,7 +130,7 @@ sunBorder.path = path11.cgPath
         friLayer.lineWidth = self.frame.size.width*0.1
         friLayer.fillColor = UIColor.clear.cgColor
         friLayer.strokeColor = UIColor.hexStringToUIColor(hex: "#424D4F").cgColor
-        bringSubview(toFront: friLabel)
+        //bringSubview(toFront: friLabel)
         
         layer.addSublayer(friBorder)
         let path16 = UIBezierPath(arcCenter: CGPoint(x:  self.frame.size.width*0.5, y: self.frame.size.height*0.5), radius: self.frame.size.width*0.45, startAngle: CGFloat(ClockFace.degree2radian(a: 285)), endAngle: CGFloat(ClockFace.degree2radian(a: 305)), clockwise: true)
@@ -226,7 +145,7 @@ sunBorder.path = path11.cgPath
         satLayer.lineWidth = self.frame.size.width*0.1
         satLayer.fillColor = UIColor.clear.cgColor
         satLayer.strokeColor = UIColor.hexStringToUIColor(hex: "#424D4F").cgColor
-        bringSubview(toFront: satLabel)
+  
         
         layer.addSublayer(satBorder)
         let path17 = UIBezierPath(arcCenter: CGPoint(x:  self.frame.size.width*0.5, y: self.frame.size.height*0.5), radius: self.frame.size.width*0.45, startAngle: CGFloat(ClockFace.degree2radian(a: 307)), endAngle: CGFloat(ClockFace.degree2radian(a: 328)), clockwise: true)
@@ -253,29 +172,4 @@ sunBorder.path = path11.cgPath
     
 }
 
-
-
-
-//override func draw(_ rect: CGRect)
-//{
-//    //sunday
-//     sunLayer = setShapeLayer(shapeLayer: sunLayer, button: sunButton, day: "Sun")
-//     sunButton.layer.addSublayer(sunLayer)
-//    sunText =  setDay(txt: sunText, button: sunButton, day: "Sun")
-//    
-//    
-//           //monday
-//            monLayer = setShapeLayer(shapeLayer: monLayer, button: monButton, day: "mon")
-//            let path4 = UIBezierPath(arcCenter: CGPoint(x: self.frame.size.width*0.425,y: self.frame.size.height*0.3), radius: self.frame.size.width*0.415, startAngle: CGFloat(Double.pi + Double.pi*23/180), endAngle: CGFloat(Double.pi + Double.pi*42/180), clockwise: true)
-//            monLayer.path = path4.cgPath
-//            monText = setDay(txt: monText, button: monButton, day: "Mon")
-//    
-//            monText.fontSize = CGFloat(18)
-//            monText.setAffineTransform(CGAffineTransform(rotationAngle: CGFloat(3*Double.pi/2)))
-//            monText.string = "Mon"
-//            monText.alignmentMode = String(kCAAlignmentRight)
-//            monText.frame = CGRect(x: monButton.frame.width*0.3-20, y:  monButton.frame.size.height*0.3, width: monButton.frame.size.width*0.3, height: monButton.frame.size.height*0.3)
-//            monButton.layer.addSublayer(monText)
-//    
-//}
 
