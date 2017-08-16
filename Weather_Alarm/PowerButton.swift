@@ -68,13 +68,13 @@ class PowerButton: UIView
         
         //Rectangle Button
         
-        timeLabel.frame=CGRect(x: 0, y: 0, width: setButton.frame.size.width,
+        timeLabel.frame=CGRect(x: 0, y: 0, width: setButton.frame.size.width*1.5,
                                     height: setButton.frame.size.height*0.5)
         timeLabel.center = CGPoint(x: setButton.frame.size.width*1.25, y: setButton.frame.midY)
         
         //AM-PM Button
         ampmButton.frame = CGRect(x: 0.0, y: 0.0, width: setButton.frame.size.width*0.5, height: setButton.frame.size.height*0.5)
-        ampmButton.center = CGPoint(x: timeLabel.frame.size.width*2, y: timeLabel.frame.midY)
+        ampmButton.center = CGPoint(x: timeLabel.frame.size.width*1.45, y: timeLabel.frame.midY)
         
         
     }
