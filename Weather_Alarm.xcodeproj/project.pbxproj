@@ -30,6 +30,7 @@
 		7F7618F81F3C376A005BE6AC /* Days.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7618F71F3C376A005BE6AC /* Days.swift */; };
 		7F7618FA1F3C376F005BE6AC /* PowerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7618F91F3C376F005BE6AC /* PowerButton.swift */; };
 		7F7618FC1F3C378B005BE6AC /* CircleFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7618FB1F3C378B005BE6AC /* CircleFunction.swift */; };
+		7F859F351F459513006E0A9C /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F859F341F459513006E0A9C /* UIButtonExtension.swift */; };
 		7FF0C3291F3C6BF900D226EA /* Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF0C3281F3C6BF900D226EA /* Shapes.swift */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +81,7 @@
 		7F7618F71F3C376A005BE6AC /* Days.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Days.swift; sourceTree = "<group>"; };
 		7F7618F91F3C376F005BE6AC /* PowerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PowerButton.swift; sourceTree = "<group>"; };
 		7F7618FB1F3C378B005BE6AC /* CircleFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleFunction.swift; sourceTree = "<group>"; };
+		7F859F341F459513006E0A9C /* UIButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		7FF0C3281F3C6BF900D226EA /* Shapes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shapes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,8 +116,8 @@
 				7F7618F11F3C375C005BE6AC /* CirclePath.swift */,
 				7F7618F31F3C3763005BE6AC /* MinuteCircle.swift */,
 				7F7618F51F3C3766005BE6AC /* HourCircle.swift */,
-				7F7618F71F3C376A005BE6AC /* Days.swift */,
 				7FF0C3281F3C6BF900D226EA /* Shapes.swift */,
+				7F7618F71F3C376A005BE6AC /* Days.swift */,
 				7F7618F91F3C376F005BE6AC /* PowerButton.swift */,
 				7F6446E71F3DB9C50044B58E /* ReturnButton.swift */,
 			);
@@ -204,6 +206,7 @@
 				0CAFAFE01F39DFB6007EBB26 /* UIColorExtension.swift */,
 				0CAFAFE21F39DFDA007EBB26 /* NSShadowExtension.swift */,
 				0C589D2A1F3B169E009F8A0F /* CGFloatExtension.swift */,
+				7F859F341F459513006E0A9C /* UIButtonExtension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CAFAFE91F39E08F007EBB26 /* BaseCircle.swift in Sources */,
+				7F859F351F459513006E0A9C /* UIButtonExtension.swift in Sources */,
 				7F7618F81F3C376A005BE6AC /* Days.swift in Sources */,
 				7F7618F61F3C3766005BE6AC /* HourCircle.swift in Sources */,
 				7F7618F01F3C373C005BE6AC /* ClockFace.swift in Sources */,

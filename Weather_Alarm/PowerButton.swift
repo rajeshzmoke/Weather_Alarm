@@ -15,7 +15,7 @@ class PowerButton: UIView
     let setButton = UIButton()
     let timeLabel = UILabel()
     let ampmButton = UIButton()
-    
+    var oN = false
     
     override init(frame: CGRect)
     {
@@ -42,20 +42,45 @@ class PowerButton: UIView
         
         ampmButton.backgroundColor = UIColor.hexStringToUIColor(hex: "#2385D9")
         ampmButton.alpha = 0.8
+        //currentTime()
         ampmButton.setTitle("AM", for: .normal)
         ampmButton.setTitleColor(UIColor.white, for: .normal)
         ampmButton.showsTouchWhenHighlighted = true
-        ampmButton.setTitle("PM", for: .highlighted)
-        ampmButton.addTarget(self, action: #selector(changer), for: UIControlEvents.touchUpInside)
+        //ampmButton.setTitle("PM", for: .highlighted)
+        ampmButton.addTarget(self, action: #selector(onClick), for: UIControlEvents.touchUpInside)
         self.addSubview(ampmButton)
-
+        
 
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+//    func currentTime()
+//    {
+//        let now = Date()
+//        let calendar = Calendar.current
+//        
+//        
+//        var hour = calendar.component(.hour, from:  now)
+//
+//
+//        if hour > 12
+//        {
+//            hour -= 12
+//            ampmButton.setTitle("PM", for: .normal)
+//        }
+//        else if hour == 12
+//        {
+//            ampmButton.setTitle("PM", for: .normal)
+//        }
+//        else
+//        {
+//            ampmButton.setTitle("AM", for: .normal)
+//            
+//        }
+//
+//    }
 
     override func layoutSubviews()
     {
@@ -78,8 +103,16 @@ class PowerButton: UIView
         
         
     }
-    func changer(){
+    func onClick()
+    {
+        changeAmPm(bool: !oN)
+    }
+    
+    func changeAmPm(bool:Bool)
+    {
+        oN = bool
         
-        print("AM-PM Selected")
     }
 }
+
+

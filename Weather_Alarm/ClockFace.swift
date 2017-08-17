@@ -69,6 +69,7 @@ class ClockFace
     
    class func drawText(rect:CGRect ,ctx:CGContext ,x:CGFloat ,y:CGFloat ,radius:CGFloat ,sides:Int ,color:UIColor)
     {
+        
         ctx.translateBy(x: 0.0, y: rect.height)
         ctx.scaleBy(x: 1.0, y: -1.0)
         //dictates on how inset the ring of numbers will be

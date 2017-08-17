@@ -12,13 +12,13 @@ import UIKit
 class  Shapes:UIView  {
     let lineWidth = 8
     
-    var sunLayer = CAShapeLayer()
-    var monLayer = CAShapeLayer()
-    var tueLayer = CAShapeLayer()
-    var wedLayer = CAShapeLayer()
-    var thuLayer = CAShapeLayer()
-    var friLayer = CAShapeLayer()
-    var satLayer = CAShapeLayer()
+   static var sunLayer = CAShapeLayer()
+   static var monLayer = CAShapeLayer()
+   static var tueLayer = CAShapeLayer()
+   static  var wedLayer = CAShapeLayer()
+   static var thuLayer = CAShapeLayer()
+   static var friLayer = CAShapeLayer()
+   static var satLayer = CAShapeLayer()
 
     var sunBorder = CAShapeLayer()
     var monBorder = CAShapeLayer()
@@ -33,16 +33,13 @@ class  Shapes:UIView  {
         super.init(frame: frame)
         self.isUserInteractionEnabled = true
         
-        sunLayer.strokeColor = UIColor.hexStringToUIColor(hex: "#16232B").cgColor
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setColor(){
-        sunLayer.strokeColor = UIColor.cyan.cgColor
-    }
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -53,27 +50,28 @@ class  Shapes:UIView  {
     
     override func draw(_ rect: CGRect) {
         
-        layer.addSublayer(sunLayer)
+        layer.addSublayer(Shapes.sunLayer)
         let path1 = UIBezierPath(arcCenter:CGPoint(x:  self.frame.size.width*0.5, y: self.frame.size.height*0.5), radius: self.frame.size.width*0.4, startAngle: CGFloat(ClockFace.degree2radian(a: 170)), endAngle: CGFloat(ClockFace.degree2radian(a: 190)), clockwise: true)
-        sunLayer.path = path1.cgPath
-        sunLayer.lineWidth = self.frame.size.width*0.1
+        Shapes.sunLayer.path = path1.cgPath
+        Shapes.sunLayer.lineWidth = self.frame.size.width*0.1
+        Shapes.sunLayer.strokeColor = UIColor.hexStringToUIColor(hex: "#16232B").cgColor
        // sunLayer.fillColor = UIColor.black.cgColor
         
 
         
-      layer.addSublayer(sunBorder)
+        layer.addSublayer(sunBorder)
         let path11 = UIBezierPath(arcCenter: CGPoint(x:  self.frame.size.width*0.5, y: self.frame.size.height*0.5), radius: self.frame.size.width*0.45, startAngle: CGFloat(ClockFace.degree2radian(a: 170)), endAngle: CGFloat(ClockFace.degree2radian(a: 190)), clockwise: true)
-sunBorder.path = path11.cgPath
+        sunBorder.path = path11.cgPath
         sunBorder.lineWidth = CGFloat(lineWidth)
-      sunBorder.strokeColor = UIColor.hexStringToUIColor(hex: "#2385D9").cgColor
+        sunBorder.strokeColor = UIColor.hexStringToUIColor(hex: "#2385D9").cgColor
         
      
-        layer.addSublayer(monLayer)
+        layer.addSublayer(Shapes.monLayer)
         let path2 = UIBezierPath(arcCenter:CGPoint(x:  self.frame.size.width*0.5, y: self.frame.size.height*0.5), radius: self.frame.size.width*0.4, startAngle: CGFloat(ClockFace.degree2radian(a: 192)), endAngle: CGFloat(ClockFace.degree2radian(a: 212)), clockwise: true)
-        monLayer.path = path2.cgPath
-        monLayer.lineWidth = self.frame.size.width*0.1
-        monLayer.fillColor = UIColor.clear.cgColor
-        monLayer.strokeColor = UIColor.hexStringToUIColor(hex: "#16232B").cgColor
+        Shapes.monLayer.path = path2.cgPath
+        Shapes.monLayer.lineWidth = self.frame.size.width*0.1
+        Shapes.monLayer.fillColor = UIColor.clear.cgColor
+        Shapes.monLayer.strokeColor = UIColor.hexStringToUIColor(hex: "#16232B").cgColor
 
         
         layer.addSublayer(monBorder)
@@ -84,12 +82,12 @@ sunBorder.path = path11.cgPath
         
         
         
-        layer.addSublayer(tueLayer)
+        layer.addSublayer(Shapes.tueLayer)
         let path3 = UIBezierPath(arcCenter:CGPoint(x:  self.frame.size.width*0.5, y: self.frame.size.height*0.5), radius: self.frame.size.width*0.4, startAngle: CGFloat(ClockFace.degree2radian(a: 215)), endAngle: CGFloat(ClockFace.degree2radian(a: 235)), clockwise: true)
-        tueLayer.path = path3.cgPath
-        tueLayer.lineWidth = self.frame.size.width*0.1
-        tueLayer.fillColor = UIColor.clear.cgColor
-        tueLayer.strokeColor = UIColor.hexStringToUIColor(hex: "#16232B").cgColor
+        Shapes.tueLayer.path = path3.cgPath
+        Shapes.tueLayer.lineWidth = self.frame.size.width*0.1
+        Shapes.tueLayer.fillColor = UIColor.clear.cgColor
+        Shapes.tueLayer.strokeColor = UIColor.hexStringToUIColor(hex: "#16232B").cgColor
 
         
         layer.addSublayer(tueBorder)
@@ -99,12 +97,12 @@ sunBorder.path = path11.cgPath
         tueBorder.strokeColor = UIColor.hexStringToUIColor(hex: "#2385D9").cgColor
         
         
-        layer.addSublayer(wedLayer)
+        layer.addSublayer(Shapes.wedLayer)
         let path4 = UIBezierPath(arcCenter:CGPoint(x:  self.frame.size.width*0.5 , y: self.frame.size.height*0.5), radius: self.frame.size.width*0.4, startAngle: CGFloat(ClockFace.degree2radian(a: 238)), endAngle: CGFloat(ClockFace.degree2radian(a: 260)), clockwise: true)
-        wedLayer.path = path4.cgPath
-        wedLayer.lineWidth = self.frame.size.width*0.1
-        wedLayer.fillColor = UIColor.clear.cgColor
-        wedLayer.strokeColor = UIColor.hexStringToUIColor(hex: "#16232B").cgColor
+        Shapes.wedLayer.path = path4.cgPath
+        Shapes.wedLayer.lineWidth = self.frame.size.width*0.1
+        Shapes.wedLayer.fillColor = UIColor.clear.cgColor
+        Shapes.wedLayer.strokeColor = UIColor.hexStringToUIColor(hex: "#16232B").cgColor
 
         
         layer.addSublayer(wedBorder)
@@ -114,12 +112,12 @@ sunBorder.path = path11.cgPath
         wedBorder.strokeColor = UIColor.hexStringToUIColor(hex: "#2385D9").cgColor
         
         
-        layer.addSublayer(thuLayer)
+        layer.addSublayer(Shapes.thuLayer)
         let path5 = UIBezierPath(arcCenter:CGPoint(x:  self.frame.size.width*0.5 , y: self.frame.size.height*0.5), radius: self.frame.size.width*0.4, startAngle: CGFloat(ClockFace.degree2radian(a: 263)), endAngle: CGFloat(ClockFace.degree2radian(a: 283)), clockwise: true)
-        thuLayer.path = path5.cgPath
-        thuLayer.lineWidth = self.frame.size.width*0.1
-        thuLayer.fillColor = UIColor.clear.cgColor
-        thuLayer.strokeColor = UIColor.hexStringToUIColor(hex: "#16232B").cgColor
+        Shapes.thuLayer.path = path5.cgPath
+        Shapes.thuLayer.lineWidth = self.frame.size.width*0.1
+        Shapes.thuLayer.fillColor = UIColor.clear.cgColor
+        Shapes.thuLayer.strokeColor = UIColor.hexStringToUIColor(hex: "#16232B").cgColor
  
         
         layer.addSublayer(thurBorder)
@@ -129,12 +127,12 @@ sunBorder.path = path11.cgPath
         thurBorder.strokeColor = UIColor.hexStringToUIColor(hex: "#2385D9").cgColor
         
         
-        layer.addSublayer(friLayer)
+        layer.addSublayer(Shapes.friLayer)
         let path6 = UIBezierPath(arcCenter:CGPoint(x:  self.frame.size.width*0.5 , y: self.frame.size.height*0.5), radius: self.frame.size.width*0.4, startAngle: CGFloat(ClockFace.degree2radian(a: 285)), endAngle: CGFloat(ClockFace.degree2radian(a: 305)), clockwise: true)
-        friLayer.path = path6.cgPath
-        friLayer.lineWidth = self.frame.size.width*0.1
-        friLayer.fillColor = UIColor.clear.cgColor
-        friLayer.strokeColor = UIColor.hexStringToUIColor(hex: "#16232B").cgColor
+        Shapes.friLayer.path = path6.cgPath
+        Shapes.friLayer.lineWidth = self.frame.size.width*0.1
+        Shapes.friLayer.fillColor = UIColor.clear.cgColor
+        Shapes.friLayer.strokeColor = UIColor.hexStringToUIColor(hex: "#16232B").cgColor
 
         
         layer.addSublayer(friBorder)
@@ -144,12 +142,12 @@ sunBorder.path = path11.cgPath
         friBorder.strokeColor = UIColor.hexStringToUIColor(hex: "#2385D9").cgColor
         
         
-        layer.addSublayer(satLayer)
+        layer.addSublayer(Shapes.satLayer)
         let path7 = UIBezierPath(arcCenter:CGPoint(x:  self.frame.size.width*0.5 , y: self.frame.size.height*0.5), radius: self.frame.size.width*0.4, startAngle: CGFloat(ClockFace.degree2radian(a: 307)), endAngle: CGFloat(ClockFace.degree2radian(a: 328)), clockwise: true)
-        satLayer.path = path7.cgPath
-        satLayer.lineWidth = self.frame.size.width*0.1
-        satLayer.fillColor = UIColor.clear.cgColor
-        satLayer.strokeColor = UIColor.hexStringToUIColor(hex: "#16232B").cgColor
+        Shapes.satLayer.path = path7.cgPath
+        Shapes.satLayer.lineWidth = self.frame.size.width*0.1
+        Shapes.satLayer.fillColor = UIColor.clear.cgColor
+        Shapes.satLayer.strokeColor = UIColor.hexStringToUIColor(hex: "#16232B").cgColor
   
         
         layer.addSublayer(satBorder)

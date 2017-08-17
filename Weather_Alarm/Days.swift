@@ -10,16 +10,14 @@ import UIKit
 
 class Days: UIView
 {
-    let shapeLayer = Shapes()
     
-    
-    var sunButton =  UIButton()
-    var monButton =  UIButton()
-    var tueButton =  UIButton()
-    var wedButton =  UIButton()
-    var thurButton = UIButton()
-    var friButton =  UIButton()
-    var satButton =  UIButton()
+    var sunButton =  ButtonProp()
+    var monButton =  ButtonProp()
+    var tueButton =  ButtonProp()
+    var wedButton =  ButtonProp()
+    var thurButton = ButtonProp()
+    var friButton =  ButtonProp()
+    var satButton =  ButtonProp()
 
     var sunView = UIView()
     var monView = UIView()
@@ -28,122 +26,105 @@ class Days: UIView
     var thurView = UIView()
     var friView = UIView()
     var satView = UIView()
-    
-    var sunText = CATextLayer()
-    var monText = CATextLayer()
-    var tueText = CATextLayer()
-    var wedText = CATextLayer()
-    var thuText = CATextLayer()
-    var friText = CATextLayer()
-    var satText = CATextLayer()
-
-    var buttonArray = [UIButton]()
-    
+  
+    let buttoObj = ButtonProp()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.isUserInteractionEnabled = true
        
         sunButton.backgroundColor = .clear
+        
         sunButton.setTitle("Sun", for: .normal)
+        sunButton.titleLabel?.font = UIFont(name: "HelveticaNeue-Thin", size: 15)
         sunButton.tag = 1
         sunButton.showsTouchWhenHighlighted = true
-        buttonArray.append(sunButton)
         sunButton.clipsToBounds = true
-        sunButton.addTarget(self, action: #selector(setDayColor(sender:)), for: UIControlEvents.touchUpInside)
+        sunButton.addTarget(self, action: #selector(togglePressed(button:)), for: UIControlEvents.touchUpInside)
 
         monButton.backgroundColor = .clear
         monButton.tag = 2
         monButton.setTitle("Mon", for: .normal)
+        monButton.titleLabel?.font = UIFont(name: "HelveticaNeue-Thin", size: 15)
         monButton.showsTouchWhenHighlighted = true
-       monButton.addTarget(self, action: #selector(setDayColor(sender:)), for: UIControlEvents.touchUpInside)
-       buttonArray.append(monButton)
+        monButton.addTarget(self, action: #selector(togglePressed(button:)), for: UIControlEvents.touchUpInside)
+
         
         tueButton.backgroundColor = .clear
         tueButton.tag = 3
         tueButton.setTitle("Tue", for: .normal)
-        buttonArray.append(tueButton)
+        tueButton.titleLabel?.font = UIFont(name: "HelveticaNeue-Thin", size: 15)
         tueButton.showsTouchWhenHighlighted = true
-        tueButton.addTarget(self, action: #selector(setDayColor(sender:)), for: UIControlEvents.touchUpInside)
+        tueButton.addTarget(self, action: #selector(togglePressed(button:)), for: UIControlEvents.touchUpInside)
         
         wedButton.backgroundColor = .clear
         wedButton.tag = 4
         wedButton.showsTouchWhenHighlighted = true
+        wedButton.titleLabel?.font = UIFont(name: "HelveticaNeue-Thin", size: 15)
         wedButton.setTitle("Wed", for: .normal)
-        buttonArray.append(wedButton)
-        wedButton.addTarget(self, action: #selector(setDayColor(sender:)), for: UIControlEvents.touchUpInside)
+        wedButton.addTarget(self, action: #selector(togglePressed(button:)), for: UIControlEvents.touchUpInside)
         
         thurButton.backgroundColor = .clear
         thurButton.tag = 5
+        thurButton.titleLabel?.font = UIFont(name: "HelveticaNeue-Thin", size: 15)
         thurButton.setTitle("Thu", for: .normal)
         thurButton.showsTouchWhenHighlighted = true
-        buttonArray.append(thurButton)
-        thurButton.addTarget(self, action: #selector(setDayColor(sender:)), for: UIControlEvents.touchUpInside)
+        thurButton.addTarget(self, action: #selector(togglePressed(button:)), for: UIControlEvents.touchUpInside)
         
         friButton.backgroundColor = .clear
         friButton.tag = 6
+        friButton.titleLabel?.font = UIFont(name: "HelveticaNeue-Thin", size: 15)
         friButton.setTitle("Fri", for: .normal)
         friButton.showsTouchWhenHighlighted = true
-        buttonArray.append(friButton)
-        friButton.addTarget(self, action: #selector(setDayColor(sender:)), for: UIControlEvents.touchUpInside)
+        friButton.addTarget(self, action: #selector(togglePressed(button:)), for: UIControlEvents.touchUpInside)
         
         satButton.backgroundColor = .clear
         satButton.tag = 7
+        satButton.titleLabel?.font = UIFont(name: "HelveticaNeue-Thin", size: 15)
         satButton.setTitle("Sat", for: .normal)
         satButton.showsTouchWhenHighlighted = true
-        buttonArray.append(satButton)
-        satButton.addTarget(self, action: #selector(setDayColor(sender:)), for: UIControlEvents.touchUpInside)
+        satButton.addTarget(self, action: #selector(togglePressed(button:)), for: UIControlEvents.touchUpInside)
         
         //
         sunView.backgroundColor = .clear
         sunView.transform = CGAffineTransform(rotationAngle: ClockFace.degree2radian(a: 270))
-        
         self.addSubview(sunView)
         sunView.addSubview(sunButton)
         
         //
         monView.backgroundColor = .clear
         monView.transform = CGAffineTransform(rotationAngle: ClockFace.degree2radian(a: 290))
-        
         self.addSubview(monView)
         monView.addSubview(monButton)
         
         //
         tueView.backgroundColor = .clear
         tueView.transform = CGAffineTransform(rotationAngle: ClockFace.degree2radian(a: 310))
-        
         self.addSubview(tueView)
         tueView.addSubview(tueButton)
         
         //
         wedView.backgroundColor = .clear
         wedView.transform = CGAffineTransform(rotationAngle: ClockFace.degree2radian(a: 340))
-        
         self.addSubview(wedView)
         wedView.addSubview(wedButton)
         
         //
         thurView.backgroundColor = .clear
-        
         self.addSubview(thurView)
         thurView.addSubview(thurButton)
         
         //
         friView.backgroundColor = .clear
         friView.transform = CGAffineTransform(rotationAngle: ClockFace.degree2radian(a: 25))
-        
         self.addSubview(friView)
         friView.addSubview(friButton)
         
         //
         satView.backgroundColor = .clear
         satView.transform = CGAffineTransform(rotationAngle: ClockFace.degree2radian(a: 45))
-        
         self.addSubview(satView)
         satView.addSubview(satButton)
-        
-       
-       
         
     }
     
@@ -151,39 +132,6 @@ class Days: UIView
         fatalError("init(coder:) has not been implemented")
     }
 
-    func setDayColor(sender:UIButton)
-    {
-        switch sender.tag {
-        case 1:
-            shapeLayer.setColor()
-            print("sunButton")
-        case 2:
-            shapeLayer.monLayer.strokeColor = UIColor.cyan.cgColor
-            print("monButton")
-        case 3:
-            shapeLayer.tueLayer.strokeColor = UIColor.cyan.cgColor
-            print("tueButton")
-        case 4:
-            shapeLayer.wedLayer.strokeColor = UIColor.cyan.cgColor
-            print("wedButton")
-        case 5:
-            shapeLayer.thuLayer.strokeColor = UIColor.cyan.cgColor
-            print("thurButton")
-        case 6:
-            shapeLayer.friLayer.strokeColor = UIColor.cyan.cgColor
-            print("friButton")
-        case 7:
-            shapeLayer.satLayer.strokeColor = UIColor.cyan.cgColor
-            print("satButton")
-        default: break
-            
-        }
-//        if(sender.tag == 1){
-//            shapeLayer.sunLayer.strokeColor = UIColor.red.cgColor
-//        }
-//        print("sunbutton clicked")
-    }
-    
     override func layoutSubviews()
     {
         super.layoutSubviews()
@@ -206,8 +154,8 @@ class Days: UIView
         monButton.center = CGPoint(x: monView.frame.size.width*0.5, y: monView.frame.size.height*0.5)
         
         //tuesday
-        tueView.frame = CGRect(x: 0.0, y: 0.0, width: buttonsize*0.3, height: buttonsize)
-        tueView.center = CGPoint(x: self.frame.size.width*0.2, y: self.frame.size.height*0.35)
+        tueView.frame = CGRect(x: 0.0, y: 0.0, width: buttonsize*0.05, height: buttonsize)
+        tueView.center = CGPoint(x: self.frame.size.width*0.2, y: self.frame.size.height*0.34)
         
         tueButton.frame = CGRect(x: 0.0, y: 0.0, width: buttonsize, height: buttonsize)
         tueButton.center = CGPoint(x: tueView.frame.size.width*0.4, y: tueView.frame.size.height*0.5)
@@ -242,8 +190,47 @@ class Days: UIView
 
        
     }
-
     
+    func togglePressed(button: UIButton)
+    {
+        if button == sunButton
+        {
+          let boolVal = sunButton.toggle()
+         sunButton.setDayColor(sender: button, bool: boolVal, layer: Shapes.sunLayer)
+        }
+        else if button == monButton
+        {
+            let boolVal = monButton.toggle()
+          monButton.setDayColor(sender: button, bool: boolVal, layer: Shapes.monLayer)
+        }
+        else if button == tueButton
+        {
+            let boolVal = tueButton.toggle()
+           tueButton.setDayColor(sender: button, bool: boolVal, layer: Shapes.tueLayer)
+        }
+        else if button == wedButton
+        {
+            let boolVal = wedButton.toggle()
+           wedButton.setDayColor(sender: button, bool: boolVal, layer: Shapes.wedLayer)
+        }
+        else if button == thurButton
+        {
+            let boolVal = thurButton.toggle()
+            thurButton.setDayColor(sender: button, bool: boolVal, layer: Shapes.thuLayer)
+        }
+        else if button == friButton
+        {
+            let boolVal = friButton.toggle()
+            friButton.setDayColor(sender: button, bool: boolVal, layer: Shapes.friLayer)
+        }
+        else if button == satButton
+        {
+            let boolVal = satButton.toggle()
+            satButton.setDayColor(sender: button, bool: boolVal, layer: Shapes.satLayer)
+        }
+
+    }
+  
     func setShapeLayer(shapeLayer: CAShapeLayer!,button: UIButton!,day: String) -> CAShapeLayer
     {
         shapeLayer.frame = button.bounds
@@ -257,18 +244,5 @@ class Days: UIView
         
         return shapeLayer
     }
-//    func setDay(txt: CATextLayer!, button: UIButton,day: String) ->CATextLayer
-//    {
-//        txt.fontSize = CGFloat(18)
-//        txt.setAffineTransform(CGAffineTransform(rotationAngle: CGFloat(3*Double.pi / 2)))
-//        txt.string = day
-//        txt.alignmentMode = String(kCAAlignmentRight)
-//        txt.frame = button.bounds
-//        
-//        button.layer.addSublayer(txt)
-//        
-//        return txt
-//    }
-//    
 
 }

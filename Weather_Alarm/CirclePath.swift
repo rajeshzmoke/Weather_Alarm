@@ -21,7 +21,9 @@ class CirclePath: UIView {
     {
         super.init(frame: frame)
 
-       
+        minCircle.backgroundColor = .clear
+        minCircle.clipsToBounds = true
+        addSubview(minCircle)
         
         shapes.backgroundColor = .clear
         addSubview(shapes)
@@ -30,9 +32,7 @@ class CirclePath: UIView {
         days.clipsToBounds = true
         addSubview(days)
 
-        minCircle.backgroundColor = .clear
-        minCircle.clipsToBounds = true
-        addSubview(minCircle)
+        
         
         hourCircle.backgroundColor = .yellow
         hourCircle.clipsToBounds = true
@@ -81,12 +81,12 @@ class CirclePath: UIView {
                  print("portrait")
                 minCircle.frame = CGRect(x:0.0 , y: 0.0, width: self.frame.size.width*0.66, height: self.frame.size.width*0.66)
                  minCircle.center = CGPoint(x: self.frame.size.width*0.5, y: self.frame.size.height*0.5)
-                //minCircle.layer.cornerRadius = minCircle.frame.size.width*0.5
+                minCircle.layer.cornerRadius = minCircle.frame.size.width*0.5
                 
                 hourCircle.frame = CGRect(x: 0.0, y: 0, width: self.frame.size.width*0.45, height: self
                     .frame.size.width*0.45)
                 hourCircle.center = CGPoint(x: self.frame.size.width*0.5, y: self.frame.size.height*0.5)
-                //hourCircle.layer.cornerRadius = hourCircle.frame.size.width*0.5
+                hourCircle.layer.cornerRadius = hourCircle.frame.size.width*0.5
                 
                 
                 powerButton.frame = CGRect(x: 0.0, y: 0.0, width: self.frame.size.width*0.55, height:self.frame.size.width*0.2)
@@ -145,7 +145,7 @@ class CirclePath: UIView {
     {
         
         if let rotation = recognizer.rotation {
-            print("Rotaion \(rotation)")
+            //print("Rotaion \(rotation)")
             // rotation is the relative rotation for the current gesture in radians
             
         }
@@ -155,20 +155,18 @@ class CirclePath: UIView {
             // angle is the absolute angle for the current gesture in radians
             
             //print("Angle \(angle.degrees)")
-//            if  hourCircle.frame.contains(XMCircleGestureRecognizer.crntPoint!) {
-//                self.hourCircle.transform = CGAffineTransform(rotationAngle: angle)
-//            } else if minCircle.frame.contains(XMCircleGestureRecognizer.crntPoint!){
-//                self.minCircle.transform = CGAffineTransform(rotationAngle: angle)
-//            }
-            if recognizer.instanceRef == "Minute"{
+
+            if recognizer.instanceRef == "Minute"
+            {
                 self.minCircle.transform = CGAffineTransform(rotationAngle: angle)
             }
-            else if recognizer.instanceRef == "Hour"{
+            else if recognizer.instanceRef == "Hour"
+            {
                 self.hourCircle.transform = CGAffineTransform(rotationAngle: angle)
             }
         }
         if let distance = recognizer.distance {
-            print("Distance \(distance)")
+            //print("Distance \(distance)")
             // distance is the absolute distance from the midPoint
             
         }

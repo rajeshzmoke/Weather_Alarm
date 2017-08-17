@@ -20,7 +20,7 @@ class MinuteCircle: UIView
      
         
         ClockFace.secondMarkers(ctx: ctx1!, x: rect.midX, y: rect.midY, radius: rad, sides: 60, color: UIColor.white)
-        ClockFace.drawText(rect: rect, ctx: ctx1!, x: rect.midX, y: rect.midY, radius: rad, sides: 12, color: UIColor.white)
+        ClockFace.drawMinuteText(rect: rect, ctx: ctx1!, x: rect.midX, y: rect.midY, radius: rad, sides: 12, color: UIColor.white)
     }
     
 //    func rotateGesture()

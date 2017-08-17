@@ -33,7 +33,8 @@ class XMCircleGestureRecognizer: UIGestureRecognizer {
     var instanceRef: String?
     
     /* PUBLIC VARS */
-    static var crntPoint: CGPoint?
+   // static var crntPoint: CGPoint?
+    
     // midpoint for gesture recognizer
     var midPoint = CGPoint.zero
     
@@ -140,7 +141,7 @@ class XMCircleGestureRecognizer: UIGestureRecognizer {
             
             currentPoint = firstTouch.location(in: self.view)
             
-          XMCircleGestureRecognizer.crntPoint = currentPoint
+         // XMCircleGestureRecognizer.crntPoint = currentPoint
             
             var newState:UIGestureRecognizerState = .began
             
@@ -156,7 +157,7 @@ class XMCircleGestureRecognizer: UIGestureRecognizer {
                 }
             }
             
-            state = newState
+           state = newState
             
         }
        flag = false
