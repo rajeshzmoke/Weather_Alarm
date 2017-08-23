@@ -13,7 +13,8 @@ class PowerButton: UIView
 
     
     let setButton = UIButton()
-    let timeLabel = UILabel()
+    static let timeLabel = UILabel()
+    static let time2Label = UILabel()
     let ampmButton = UIButton()
     var oN = false
     
@@ -22,11 +23,17 @@ class PowerButton: UIView
         super.init(frame: frame)
         self.isUserInteractionEnabled = true
 
-        timeLabel.backgroundColor = UIColor.hexStringToUIColor(hex: "#2385D9")
-        timeLabel.text = "10 : 35"
-        timeLabel.textColor = UIColor.white
-        timeLabel.textAlignment  = .center
-        self.addSubview(timeLabel)
+        PowerButton.timeLabel.backgroundColor = UIColor.hexStringToUIColor(hex: "#2385D9")
+        PowerButton.timeLabel.text = "10 : 35"
+        PowerButton.timeLabel.textColor = UIColor.white
+        PowerButton.timeLabel.textAlignment  = .center
+        self.addSubview(PowerButton.timeLabel)
+        
+        PowerButton.time2Label.backgroundColor = UIColor.hexStringToUIColor(hex: "#2385D9")
+        PowerButton.time2Label.text = "0"
+        PowerButton.time2Label.textColor = UIColor.white
+        PowerButton.time2Label.textAlignment  = .center
+        self.addSubview(PowerButton.time2Label)
         
         
         setButton.showsTouchWhenHighlighted = true
@@ -56,31 +63,6 @@ class PowerButton: UIView
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-//    func currentTime()
-//    {
-//        let now = Date()
-//        let calendar = Calendar.current
-//        
-//        
-//        var hour = calendar.component(.hour, from:  now)
-//
-//
-//        if hour > 12
-//        {
-//            hour -= 12
-//            ampmButton.setTitle("PM", for: .normal)
-//        }
-//        else if hour == 12
-//        {
-//            ampmButton.setTitle("PM", for: .normal)
-//        }
-//        else
-//        {
-//            ampmButton.setTitle("AM", for: .normal)
-//            
-//        }
-//
-//    }
 
     override func layoutSubviews()
     {
@@ -93,13 +75,17 @@ class PowerButton: UIView
         
         //Rectangle Button
         
-        timeLabel.frame=CGRect(x: 0, y: 0, width: setButton.frame.size.width*1.5,
+        PowerButton.timeLabel.frame=CGRect(x: 0, y: 0, width: setButton.frame.size.width*1.5,
                                     height: setButton.frame.size.height*0.5)
-        timeLabel.center = CGPoint(x: setButton.frame.size.width*1.25, y: setButton.frame.midY)
+        PowerButton.timeLabel.center = CGPoint(x: setButton.frame.size.width*1.25, y: setButton.frame.midY)
+        
+        PowerButton.time2Label.frame=CGRect(x: 0, y: 0, width: setButton.frame.size.width*0.5,
+                                           height: setButton.frame.size.height*0.5)
+        PowerButton.time2Label.center = CGPoint(x: setButton.frame.size.width*1.25, y: setButton.frame.midY+50)
         
         //AM-PM Button
         ampmButton.frame = CGRect(x: 0.0, y: 0.0, width: setButton.frame.size.width*0.5, height: setButton.frame.size.height*0.5)
-        ampmButton.center = CGPoint(x: timeLabel.frame.size.width*1.45, y: timeLabel.frame.midY)
+        ampmButton.center = CGPoint(x: PowerButton.timeLabel.frame.size.width*1.45, y: PowerButton.timeLabel.frame.midY)
         
         
     }

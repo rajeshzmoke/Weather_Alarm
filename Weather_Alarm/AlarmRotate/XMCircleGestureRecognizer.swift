@@ -143,7 +143,7 @@ class XMCircleGestureRecognizer: UIGestureRecognizer {
             
          // XMCircleGestureRecognizer.crntPoint = currentPoint
             
-            var newState:UIGestureRecognizerState = .began
+           var newState:UIGestureRecognizerState = .began
             
             if let innerRadius = self.innerRadius, let distance = self.distance {
                 if distance < innerRadius {
@@ -157,7 +157,7 @@ class XMCircleGestureRecognizer: UIGestureRecognizer {
                 }
             }
             
-           state = newState
+          state = newState
             
         }
        flag = false

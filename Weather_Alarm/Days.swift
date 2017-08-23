@@ -34,12 +34,11 @@ class Days: UIView
         self.isUserInteractionEnabled = true
        
         sunButton.backgroundColor = .clear
-        
         sunButton.setTitle("Sun", for: .normal)
         sunButton.titleLabel?.font = UIFont(name: "HelveticaNeue-Thin", size: 15)
         sunButton.tag = 1
         sunButton.showsTouchWhenHighlighted = true
-        sunButton.clipsToBounds = true
+        //sunButton.clipsToBounds = true
         sunButton.addTarget(self, action: #selector(togglePressed(button:)), for: UIControlEvents.touchUpInside)
 
         monButton.backgroundColor = .clear

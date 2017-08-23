@@ -10,21 +10,16 @@ import UIKit
 
 class HourCircle: UIView
 {
-    var gesture:  XMCircleGestureRecognizer?
+    
     var days = Days()
+    var instanceHr:String = "Hour"
+    
+
+    
+    
     override func draw(_ rect: CGRect)
     {
-     // Hour Circle
-     // set inner-radius to the corner radius of the Set button and
-     // set outer radius to the corner radius of the hourcircle
-        
-//        gesture = XMCircleGestureRecognizer(midPoint:CGPoint(x: self.frame.size.width*0.5, y: self.frame.size.height*0.5),
-//                                            innerRadius: days.setButton,
-//                                            outerRadius: (self.layer.cornerRadius),
-//                                            target: self,
-//                                            action: #selector(rotateGesture))
-//      gesture = XMCircleGestureRecognizer(midPoint: CGPoint(x: self.frame.size.width*0.5, y: self.frame.size.height*0.5), target: self, action: #selector(rotateGesture))
-//        self.addGestureRecognizer(gesture!)
+     
         
         let ctx1 = UIGraphicsGetCurrentContext()
         let rad = self.frame.size.width*0.5  //radius*

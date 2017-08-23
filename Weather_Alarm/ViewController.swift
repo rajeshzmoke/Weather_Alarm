@@ -26,7 +26,7 @@ class ViewController: UIViewController
         self.view = cp
         cp.clipsToBounds = true
         cp.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "Image"))
-        
+      
         
         
     }
