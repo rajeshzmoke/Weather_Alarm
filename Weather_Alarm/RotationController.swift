@@ -151,7 +151,7 @@ class RotationController: UIGestureRecognizer
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        //        myView?.transform = startTransform
+       startTransform = myView!.transform
         //        RotationController.startingAngle = nil
        // flag = true
        // print("ended \(flag)")

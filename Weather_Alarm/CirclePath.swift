@@ -73,59 +73,57 @@ class CirclePath: UIView {
         {
               if UIDevice.current.orientation.isPortrait
             {
-        
-
                 print("portrait")
-                minCircle.frame = CGRect(x:0.0 , y: 0.0, width: self.frame.size.width*0.66, height: self.frame.size.width*0.66)
-                minCircle.center = CGPoint(x: self.frame.size.width*0.5, y: self.frame.size.height*0.5)
-                minCircle.layer.cornerRadius = minCircle.frame.size.width*0.5
+                minCircle.bounds = CGRect(x:0.0 , y: 0.0, width: self.bounds.size.width*0.66, height: self.bounds.size.width*0.66)
+                minCircle.center = CGPoint(x: self.bounds.size.width*0.5, y: self.bounds.size.height*0.5)
+                minCircle.layer.cornerRadius = minCircle.bounds.size.width*0.5
                 
-                hourCircle.frame = CGRect(x: 0.0, y: 0, width: self.frame.size.width*0.45, height: self
-                    .frame.size.width*0.45)
-                hourCircle.center = CGPoint(x: self.frame.size.width*0.5, y: self.frame.size.height*0.5)
-                hourCircle.layer.cornerRadius = hourCircle.frame.size.width*0.5
+                hourCircle.bounds = CGRect(x: 0.0, y: 0, width: self.bounds.size.width*0.45, height: self
+                    .bounds.size.width*0.45)
+                hourCircle.center = CGPoint(x: self.bounds.size.width*0.5, y: self.bounds.size.height*0.5)
+                hourCircle.layer.cornerRadius = hourCircle.bounds.size.width*0.5
                 
-                powerButton.frame = CGRect(x: 0.0, y: 0.0, width: self.frame.size.width*0.55, height:self.frame.size.width*0.2)
-                powerButton.center = CGPoint(x: self.frame.midX + self.frame.midX*0.4, y: self.frame.size.height*0.5)
-                powerButton.layer.cornerRadius = powerButton.frame.size.width*0.5
+                powerButton.bounds = CGRect(x: 0.0, y: 0.0, width: self.bounds.size.width*0.55, height:self.bounds.size.width*0.2)
+                powerButton.center = CGPoint(x: self.bounds.midX + self.bounds.midX*0.4, y: self.bounds.size.height*0.5)
+                powerButton.layer.cornerRadius = powerButton.bounds.size.width*0.5
                
-                days.frame = CGRect(x: 0.0, y: 0.0, width: self.frame.size.width, height: self.frame.size.height)
-                days.center = CGPoint(x: self.frame.size.width*0.5, y: self.frame.size.height*0.5)
+                days.bounds = CGRect(x: 0.0, y: 0.0, width: self.bounds.size.width, height: self.bounds.size.height)
+                days.center = CGPoint(x: self.bounds.size.width*0.5, y: self.bounds.size.height*0.5)
                 
-                shapes.frame = CGRect(x: 0.0, y: 0.0, width: self.frame.size.width, height: self.frame.size.height)
-                shapes.center = CGPoint(x: self.frame.size.width*0.5, y: self.frame.size.height*0.5)
+                shapes.bounds = CGRect(x: 0.0, y: 0.0, width: self.bounds.size.width, height: self.bounds.size.height)
+                shapes.center = CGPoint(x: self.bounds.size.width*0.5, y: self.bounds.size.height*0.5)
                 
-                returnButton.frame = CGRect(x: 0.0, y: 0.0, width: self.frame.size.width*0.15, height: self.frame.size.width*0.15)
-                returnButton.center = CGPoint(x: self.frame.size.width*0.15, y: self.frame.size.height*0.65)
-                returnButton.layer.cornerRadius = returnButton.frame.size.width*0.5
+                returnButton.bounds = CGRect(x: 0.0, y: 0.0, width: self.bounds.size.width*0.15, height: self.bounds.size.width*0.15)
+                returnButton.center = CGPoint(x: self.bounds.size.width*0.15, y: self.bounds.size.height*0.65)
+                returnButton.layer.cornerRadius = returnButton.bounds.size.width*0.5
 
             }
             else if UIDevice.current.orientation.isLandscape
             {
                 print("landscape")
-                minCircle.frame = CGRect(x:0.0 , y: 0.0, width: self.frame.size.height*0.66, height: self.frame.size.height*0.66)
+                minCircle.bounds = CGRect(x:0.0 , y: 0.0, width: self.bounds.size.height*0.66, height: self.bounds.size.height*0.66)
                 minCircle.center = self.center
                 // CGPoint(x: self.frame.size.width*0.5, y: self.frame.size.height*0.5)
-                minCircle.layer.cornerRadius = minCircle.frame.size.height*0.5
+                minCircle.layer.cornerRadius = minCircle.bounds.size.height*0.5
                 
-                hourCircle.frame = CGRect(x: 0.0, y: 0, width: self.frame.size.height*0.45, height: self
-                    .frame.size.height*0.45)
-                hourCircle.center = CGPoint(x: self.frame.size.width*0.5, y: self.frame.size.height*0.5)
-                hourCircle.layer.cornerRadius = hourCircle.frame.size.height*0.5
+                hourCircle.bounds = CGRect(x: 0.0, y: 0, width: self.bounds.size.height*0.45, height: self
+                    .bounds.size.height*0.45)
+                hourCircle.center = CGPoint(x: self.bounds.size.width*0.5, y: self.bounds.size.height*0.5)
+                hourCircle.layer.cornerRadius = hourCircle.bounds.size.height*0.5
                 
-                powerButton.frame = CGRect(x: 0.0, y: 0.0, width: self.frame.size.height*0.2, height:self.frame.size.height*0.2)
-                powerButton.center = CGPoint(x: self.frame.size.width*0.5, y: self.frame.size.height*0.5)
+                powerButton.bounds = CGRect(x: 0.0, y: 0.0, width: self.bounds.size.height*0.2, height:self.bounds.size.height*0.2)
+                powerButton.center = CGPoint(x: self.bounds.size.width*0.5, y: self.bounds.size.height*0.5)
                 
                 
-                days.frame = CGRect(x: 0.0, y: 0.0, width: self.frame.size.width, height: self.frame.size.height)
-                days.center = CGPoint(x: self.frame.size.width*0.5, y: self.frame.size.height*0.5)
+                days.bounds = CGRect(x: 0.0, y: 0.0, width: self.bounds.size.width, height: self.bounds.size.height)
+                days.center = CGPoint(x: self.bounds.size.width*0.5, y: self.bounds.size.height*0.5)
                 
-                shapes.frame = CGRect(x: 0.0, y: 0.0, width: self.frame.size.width, height: self.frame.size.height)
-                shapes.center = CGPoint(x: self.frame.size.width*0.5, y: self.frame.size.height*0.5)
+                shapes.bounds = CGRect(x: 0.0, y: 0.0, width: self.bounds.size.width, height: self.bounds.size.height)
+                shapes.center = CGPoint(x: self.bounds.size.width*0.5, y: self.bounds.size.height*0.5)
                 
-                returnButton.frame = CGRect(x: 0.0, y: 0.0, width: self.frame.size.width*0.15, height: self.frame.size.width*0.15)
-                returnButton.center = CGPoint(x: self.frame.size.width*0.15, y: self.frame.size.height*0.65)
-                returnButton.layer.cornerRadius = returnButton.frame.size.width*0.5
+                returnButton.bounds = CGRect(x: 0.0, y: 0.0, width: self.bounds.size.width*0.15, height: self.bounds.size.width*0.15)
+                returnButton.center = CGPoint(x: self.bounds.size.width*0.15, y: self.bounds.size.height*0.65)
+                returnButton.layer.cornerRadius = returnButton.bounds.size.width*0.5
             }
 
         }
@@ -160,12 +158,12 @@ class CirclePath: UIView {
 //        self.addGestureRecognizer(cgr2)
         
         
-        let r1 = RotationController(myView: minCircle, innerRadius: (self.frame.width*0.45)*0.5, outerRadius: (minCircle.frame.size.width/2), instanceRef: "Minute", target: self, action:nil)
+        let r1 = RotationController(myView: minCircle, innerRadius: (self.bounds.width*0.45)*0.5, outerRadius: (minCircle.bounds.size.width/2), instanceRef: "Minute", target: self, action:nil)
            // #selector(testGesture(recognizer:)))
                 self.addGestureRecognizer(r1)
     //r1.cancelsTouchesInView = false
         
-        let r2 = RotationController(myView: hourCircle, innerRadius: (self.frame.size.width*0.25)*0.5, outerRadius: hourCircle.frame.size.width/2, instanceRef: "Hour", target: self, action:nil)
+        let r2 = RotationController(myView: hourCircle, innerRadius: (self.bounds.size.width*0.25)*0.5, outerRadius: hourCircle.bounds.size.width/2, instanceRef: "Hour", target: self, action:nil)
             //#selector(testGesture(recognizer:)))
         self.addGestureRecognizer(r2)
         //r2.cancelsTouchesInView = false

@@ -21,6 +21,7 @@
 		0CAFAFE51F39E001007EBB26 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAFAFE41F39E001007EBB26 /* Weather.swift */; };
 		0CAFAFE71F39E04C007EBB26 /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAFAFE61F39E04C007EBB26 /* Circle.swift */; };
 		0CAFAFE91F39E08F007EBB26 /* BaseCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAFAFE81F39E08F007EBB26 /* BaseCircle.swift */; };
+		7F199DC51F4E9AAF004D24A6 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F199DC41F4E9AAF004D24A6 /* Test.swift */; };
 		7F6446E81F3DB9C50044B58E /* ReturnButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6446E71F3DB9C50044B58E /* ReturnButton.swift */; };
 		7F7618EE1F3C3708005BE6AC /* XMCircleGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7618ED1F3C3708005BE6AC /* XMCircleGestureRecognizer.swift */; };
 		7F7618F01F3C373C005BE6AC /* ClockFace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7618EF1F3C373C005BE6AC /* ClockFace.swift */; };
@@ -72,6 +73,7 @@
 		0CAFAFE41F39E001007EBB26 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		0CAFAFE61F39E04C007EBB26 /* Circle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Circle.swift; sourceTree = "<group>"; };
 		0CAFAFE81F39E08F007EBB26 /* BaseCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCircle.swift; sourceTree = "<group>"; };
+		7F199DC41F4E9AAF004D24A6 /* Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		7F6446E71F3DB9C50044B58E /* ReturnButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReturnButton.swift; sourceTree = "<group>"; };
 		7F7618ED1F3C3708005BE6AC /* XMCircleGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XMCircleGestureRecognizer.swift; path = AlarmRotate/XMCircleGestureRecognizer.swift; sourceTree = "<group>"; };
 		7F7618EF1F3C373C005BE6AC /* ClockFace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockFace.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 		0C589D251F3B1615009F8A0F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				7F199DC41F4E9AAF004D24A6 /* Test.swift */,
 				7F7618EF1F3C373C005BE6AC /* ClockFace.swift */,
 				7F7618ED1F3C3708005BE6AC /* XMCircleGestureRecognizer.swift */,
 				7F8D52AF1F4BF9440061256B /* RotationController.swift */,
@@ -363,6 +366,7 @@
 				0CAFAFE31F39DFDA007EBB26 /* NSShadowExtension.swift in Sources */,
 				7F8D52B01F4BF9440061256B /* RotationController.swift in Sources */,
 				0CAFAFAA1F39DEF1007EBB26 /* AppDelegate.swift in Sources */,
+				7F199DC51F4E9AAF004D24A6 /* Test.swift in Sources */,
 				0CAFAFE51F39E001007EBB26 /* Weather.swift in Sources */,
 				0C589D2B1F3B169E009F8A0F /* CGFloatExtension.swift in Sources */,
 				0CAFAFE11F39DFB6007EBB26 /* UIColorExtension.swift in Sources */,
