@@ -131,31 +131,7 @@ class CirclePath: UIView {
     
     override func draw(_ rect: CGRect)
     {
-        // MinCircle
-        //        set inner-radius to the corner radius of the hourCircle and
-        //        set outer-radius to the corner radius of the minCircle
-        //       let cgr1 = XMCircleGestureRecognizer(midPoint:self.center,
-        //                                             innerRadius:(self.frame.width*0.45)*0.5,
-        //                                             outerRadius:(minCircle.frame.size.width/2),
-        //                                             instanceRef:"Minute",
-        //                                             target: self,
-        //                                             action: #selector(rotateGesture(recognizer:)))
-        //        self.addGestureRecognizer(cgr1)
-        //
-        
-        
-        
-        // Hour Circle
-        //set inner-radius to the corner radius of the Set button and
-        //set outer radius to the corner radius of the hourcircle
-        //
-        //      let cgr2 = XMCircleGestureRecognizer(midPoint:self.center,
-        //                                             innerRadius:(self.frame.size.width*0.25)*0.5,
-        //                                             outerRadius:hourCircle.frame.size.width/2,
-        //                                             instanceRef: "Hour",
-        //                                             target: self,
-        //                                             action: #selector(rotateGesture(recognizer:)))
-        //        self.addGestureRecognizer(cgr2)
+     
         
         
         let r1 = RotationController(myView: minCircle, innerRadius: (self.bounds.width*0.45)*0.5, outerRadius: (minCircle.bounds.size.width/2), instanceRef: "Minute", target: self, action:nil)

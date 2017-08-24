@@ -157,6 +157,7 @@ class RotationController: UIGestureRecognizer
         //        RotationController.startingAngle = nil
         // flag = true
         // print("ended \(flag)")
+        
     }
     
     
@@ -169,8 +170,11 @@ class RotationController: UIGestureRecognizer
         }
         else
         {
-            PowerButton.timeLabel.text = "\(arr[radian] ?? 0000)"
-            
+            if myView!.isMember(of: HourCircle.self){
+                PowerButton.timeLabel.text = "\(arr[radian] ?? 000) :"
+            }else{
+            PowerButton.time2Label.text = "\(arr[radian]!*5 ?? 0000)"
+            }
         }
         
         

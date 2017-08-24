@@ -26,7 +26,7 @@ class PowerButton: UIView
         PowerButton.timeLabel.backgroundColor = UIColor.hexStringToUIColor(hex: "#2385D9")
         PowerButton.timeLabel.text = "- :"
         PowerButton.timeLabel.textColor = UIColor.white
-        PowerButton.timeLabel.textAlignment  = .center
+        PowerButton.timeLabel.textAlignment  = .right
         self.addSubview(PowerButton.timeLabel)
         
         PowerButton.time2Label.backgroundColor = UIColor.hexStringToUIColor(hex: "#2385D9")
@@ -75,17 +75,17 @@ class PowerButton: UIView
         
         //Rectangle Button
         
-        PowerButton.timeLabel.bounds=CGRect(x: 0, y: 0, width: setButton.bounds.size.width*1.5,
+        PowerButton.timeLabel.bounds=CGRect(x: 0, y: 0, width: setButton.bounds.size.width*0.6,
                                     height: setButton.bounds.size.height*0.5)
-        PowerButton.timeLabel.center = CGPoint(x: setButton.bounds.size.width*1.25, y: setButton.bounds.midY)
+        PowerButton.timeLabel.center = CGPoint(x: setButton.bounds.size.width*1.05, y: setButton.bounds.midY)
         
         PowerButton.time2Label.bounds=CGRect(x: 0, y: 0, width: setButton.bounds.size.width*0.5,
                                            height: setButton.bounds.size.height*0.5)
-        PowerButton.time2Label.center = CGPoint(x: setButton.bounds.size.width*1.5, y: setButton.bounds.midY)
+        PowerButton.time2Label.center = CGPoint(x: setButton.bounds.size.width*1.6, y: setButton.bounds.midY)
         
         //AM-PM Button
         ampmButton.bounds = CGRect(x: 0.0, y: 0.0, width: setButton.bounds.size.width*0.5, height: setButton.bounds.size.height*0.5)
-        ampmButton.center = CGPoint(x: PowerButton.timeLabel.bounds.size.width*1.45, y: PowerButton.timeLabel.bounds.midY*2)
+        ampmButton.center = CGPoint(x: setButton.bounds.size.width*2.1, y: setButton.bounds.midY)
         
         
     }
