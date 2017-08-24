@@ -24,7 +24,7 @@ class PowerButton: UIView
         self.isUserInteractionEnabled = true
 
         PowerButton.timeLabel.backgroundColor = UIColor.hexStringToUIColor(hex: "#2385D9")
-        PowerButton.timeLabel.text = "10 : 35"
+        PowerButton.timeLabel.text = "- :"
         PowerButton.timeLabel.textColor = UIColor.white
         PowerButton.timeLabel.textAlignment  = .center
         self.addSubview(PowerButton.timeLabel)
@@ -69,23 +69,23 @@ class PowerButton: UIView
         self.isUserInteractionEnabled = true
         
         //Button round
-        setButton.frame=CGRect(x: 0, y: 0 ,width: self.frame.size.width*0.4, height: self.frame.size.width*0.4)
-        setButton.center = CGPoint(x: self.frame.size.width*0.15, y: self.frame.size.height*0.5)
-        setButton.layer.cornerRadius = (setButton.frame.size.width)*0.5
+        setButton.bounds=CGRect(x: 0, y: 0 ,width: self.bounds.size.width*0.4, height: self.bounds.size.width*0.4)
+        setButton.center = CGPoint(x: self.bounds.size.width*0.15, y: self.bounds.size.height*0.5)
+        setButton.layer.cornerRadius = (setButton.bounds.size.width)*0.5
         
         //Rectangle Button
         
-        PowerButton.timeLabel.frame=CGRect(x: 0, y: 0, width: setButton.frame.size.width*1.5,
-                                    height: setButton.frame.size.height*0.5)
-        PowerButton.timeLabel.center = CGPoint(x: setButton.frame.size.width*1.25, y: setButton.frame.midY)
+        PowerButton.timeLabel.bounds=CGRect(x: 0, y: 0, width: setButton.bounds.size.width*1.5,
+                                    height: setButton.bounds.size.height*0.5)
+        PowerButton.timeLabel.center = CGPoint(x: setButton.bounds.size.width*1.25, y: setButton.bounds.midY)
         
-        PowerButton.time2Label.frame=CGRect(x: 0, y: 0, width: setButton.frame.size.width*0.5,
-                                           height: setButton.frame.size.height*0.5)
-        PowerButton.time2Label.center = CGPoint(x: setButton.frame.size.width*1.25, y: setButton.frame.midY+50)
+        PowerButton.time2Label.bounds=CGRect(x: 0, y: 0, width: setButton.bounds.size.width*0.5,
+                                           height: setButton.bounds.size.height*0.5)
+        PowerButton.time2Label.center = CGPoint(x: setButton.bounds.size.width*1.5, y: setButton.bounds.midY)
         
         //AM-PM Button
-        ampmButton.frame = CGRect(x: 0.0, y: 0.0, width: setButton.frame.size.width*0.5, height: setButton.frame.size.height*0.5)
-        ampmButton.center = CGPoint(x: PowerButton.timeLabel.frame.size.width*1.45, y: PowerButton.timeLabel.frame.midY)
+        ampmButton.bounds = CGRect(x: 0.0, y: 0.0, width: setButton.bounds.size.width*0.5, height: setButton.bounds.size.height*0.5)
+        ampmButton.center = CGPoint(x: PowerButton.timeLabel.bounds.size.width*1.45, y: PowerButton.timeLabel.bounds.midY*2)
         
         
     }

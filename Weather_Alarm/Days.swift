@@ -136,56 +136,56 @@ class Days: UIView
         super.layoutSubviews()
         self.isUserInteractionEnabled = true
         
-        let buttonsize  = self.frame.size.width*0.14
+        let buttonsize  = self.bounds.size.width*0.14
         
         //sunday
-        sunView.frame = CGRect(x: 0.0, y: 0.0, width: buttonsize*0.7, height: buttonsize*0.7)
-        sunView.center = CGPoint(x: self.frame.size.width*0.1, y: self.frame.size.height*0.5)
+        sunView.bounds = CGRect(x: 0.0, y: 0.0, width: buttonsize*0.7, height: buttonsize*0.7)
+        sunView.center = CGPoint(x: self.bounds.size.width*0.1, y: self.bounds.size.height*0.5)
       
-        sunButton.frame = CGRect(x: 0.0, y: 0.0, width:buttonsize , height:buttonsize)
-        sunButton.center = CGPoint(x: sunView.frame.size.width*0.5 , y: sunView.frame.size.height*0.5)
+        sunButton.bounds = CGRect(x: 0.0, y: 0.0, width:buttonsize , height:buttonsize)
+        sunButton.center = CGPoint(x: sunView.bounds.size.width*0.5 , y: sunView.bounds.size.height*0.5)
         
         //monday
-        monView.frame = CGRect(x: 0.0, y: 0.0, width: buttonsize*0.5, height: buttonsize)
-        monView.center = CGPoint(x: self.frame.size.width*0.12, y: self.frame.size.height*0.42)
+        monView.bounds = CGRect(x: 0.0, y: 0.0, width: buttonsize*0.5, height: buttonsize)
+        monView.center = CGPoint(x: self.bounds.size.width*0.12, y: self.bounds.size.height*0.42)
         
-        monButton.frame = CGRect(x: 0.0, y: 0.0, width: buttonsize, height: buttonsize)
-        monButton.center = CGPoint(x: monView.frame.size.width*0.5, y: monView.frame.size.height*0.5)
+        monButton.bounds = CGRect(x: 0.0, y: 0.0, width: buttonsize, height: buttonsize)
+        monButton.center = CGPoint(x: monView.bounds.size.width*0.5, y: monView.bounds.size.height*0.5)
         
         //tuesday
-        tueView.frame = CGRect(x: 0.0, y: 0.0, width: buttonsize*0.05, height: buttonsize)
-        tueView.center = CGPoint(x: self.frame.size.width*0.2, y: self.frame.size.height*0.34)
+        tueView.bounds = CGRect(x: 0.0, y: 0.0, width: buttonsize*0.05, height: buttonsize)
+        tueView.center = CGPoint(x: self.bounds.size.width*0.2, y: self.bounds.size.height*0.34)
         
-        tueButton.frame = CGRect(x: 0.0, y: 0.0, width: buttonsize, height: buttonsize)
-        tueButton.center = CGPoint(x: tueView.frame.size.width*0.4, y: tueView.frame.size.height*0.5)
+        tueButton.bounds = CGRect(x: 0.0, y: 0.0, width: buttonsize, height: buttonsize)
+        tueButton.center = CGPoint(x: tueView.bounds.size.width*0.4, y: tueView.bounds.size.height*0.5)
         
         //wednesday
-        wedView.frame = CGRect(x: 0.0 ,y: 0.0, width: buttonsize, height: buttonsize*0.4)
-        wedView.center = CGPoint(x: self.frame.size.width*0.35, y: self.frame.size.height*0.285)
+        wedView.bounds = CGRect(x: 0.0 ,y: 0.0, width: buttonsize, height: buttonsize*0.4)
+        wedView.center = CGPoint(x: self.bounds.size.width*0.35, y: self.bounds.size.height*0.285)
         
-        wedButton.frame = CGRect(x: 0.0 ,y: 0.0, width: buttonsize, height: buttonsize)
-        wedButton.center = CGPoint(x: wedView.frame.size.width*0.4, y: wedView.frame.size.height*0.5)
+        wedButton.bounds = CGRect(x: 0.0 ,y: 0.0, width: buttonsize, height: buttonsize)
+        wedButton.center = CGPoint(x: wedView.bounds.size.width*0.4, y: wedView.bounds.size.height*0.5)
         
         //thursday
-        thurView.frame = CGRect(x: 0.0 ,y: 0.0 , width: buttonsize*0.7, height: buttonsize*0.7)
-        thurView.center = CGPoint(x: self.frame.size.width*0.525, y: self.frame.size.height*0.28)
+        thurView.bounds = CGRect(x: 0.0 ,y: 0.0 , width: buttonsize*0.7, height: buttonsize*0.7)
+        thurView.center = CGPoint(x: self.bounds.size.width*0.525, y: self.bounds.size.height*0.28)
         
-        thurButton.frame = CGRect(x: 0.0 ,y: 0.0 , width: buttonsize, height: buttonsize)
-        thurButton.center = CGPoint(x: thurView.frame.size.width*0.4, y: thurView.frame.size.height*0.5)
+        thurButton.bounds = CGRect(x: 0.0 ,y: 0.0 , width: buttonsize, height: buttonsize)
+        thurButton.center = CGPoint(x: thurView.bounds.size.width*0.4, y: thurView.bounds.size.height*0.5)
         
         //friday
-        friView.frame = CGRect(x: 0.0 ,y: 0.0 , width: buttonsize*0.6, height: buttonsize)
-        friView.center = CGPoint(x: self.frame.size.width*0.68, y: self.frame.size.height*0.29)
+        friView.bounds = CGRect(x: 0.0 ,y: 0.0 , width: buttonsize*0.6, height: buttonsize)
+        friView.center = CGPoint(x: self.bounds.size.width*0.68, y: self.bounds.size.height*0.29)
         
-        friButton.frame = CGRect(x: 0.0 ,y: 0.0 , width: buttonsize, height: buttonsize)
-        friButton.center = CGPoint(x: friView.frame.size.width*0.4, y: friView.frame.size.height*0.5)
+        friButton.bounds = CGRect(x: 0.0 ,y: 0.0 , width: buttonsize, height: buttonsize)
+        friButton.center = CGPoint(x: friView.bounds.size.width*0.4, y: friView.bounds.size.height*0.5)
         
         //Saturday
-        satView.frame = CGRect(x: 0.0 ,y: 0.0, width: buttonsize*0.2, height: buttonsize)
-        satView.center = CGPoint(x: self.frame.size.width*0.81, y: self.frame.size.height*0.355)
+        satView.bounds = CGRect(x: 0.0 ,y: 0.0, width: buttonsize*0.2, height: buttonsize)
+        satView.center = CGPoint(x: self.bounds.size.width*0.81, y: self.bounds.size.height*0.355)
         
-        satButton.frame = CGRect(x: 0.0 ,y: 0.0, width: buttonsize, height: buttonsize)
-        satButton.center = CGPoint(x: satView.frame.size.width*0.3, y: satView.frame.size.height*0.35)
+        satButton.bounds = CGRect(x: 0.0 ,y: 0.0, width: buttonsize, height: buttonsize)
+        satButton.center = CGPoint(x: satView.bounds.size.width*0.3, y: satView.bounds.size.height*0.35)
 
        
     }
@@ -234,7 +234,7 @@ class Days: UIView
     {
         shapeLayer.frame = button.bounds
         button.backgroundColor = .yellow
-        shapeLayer.lineWidth = self.frame.size.width*0.17
+        shapeLayer.lineWidth = self.bounds.size.width*0.17
         shapeLayer.fillColor = UIColor.clear.cgColor
         shapeLayer.strokeColor = UIColor.gray.cgColor
         

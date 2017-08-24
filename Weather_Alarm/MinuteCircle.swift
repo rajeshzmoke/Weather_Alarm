@@ -12,7 +12,7 @@ class MinuteCircle: UIView
 {
     var instanceMn:String = "Minute"
     var startTransform = CGAffineTransform()
-    static  var startingAngle:CGFloat?
+ 
     
     var timeArr = [Double: Int]()
     var count = 0

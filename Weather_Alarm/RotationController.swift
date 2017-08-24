@@ -20,23 +20,23 @@ extension Double {
 
 class RotationController: UIGestureRecognizer
 {
-
+    
     var instanceRef: String?
     var startTransform:CGAffineTransform?
     
-    static  var startingAngle:CGFloat?
-   
-   
-    var flag = true
+    static  var startingAngle:CGFloat = CGFloat(0)
+    
+    
+    var flag:Bool = true
     
     var myView:UIView?
     
     var innerRadius:CGFloat?
     var outerRadius:CGFloat?
-   
+    
     var angleDifference: CGFloat?
     var arr : [Double : Int]!
-
+    
     
     init(myView:UIView?,innerRadius:CGFloat?, outerRadius:CGFloat? ,instanceRef:String ,target: AnyObject?, action: Selector?) {
         super.init(target: target, action: action)
@@ -47,21 +47,21 @@ class RotationController: UIGestureRecognizer
         self.myView = myView
         self.innerRadius = innerRadius
         self.outerRadius = outerRadius
-       
+        
     }
-
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     
-   
+    
     
     func getMyValues() -> [Double:Int]
     {
-
+        
         var newArr = [Double: Int]()
-
+        
         newArr.updateValue(11, forKey: Double(0.5))
         newArr.updateValue(10, forKey: Double(1.0))
         newArr.updateValue(9, forKey: Double(1.5))
@@ -82,63 +82,65 @@ class RotationController: UIGestureRecognizer
     
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent) {
-        super.touchesBegan(touches, with: event)
-      
         
         for touch in touches {
             
             let location = touch.location(in:myView?.superview)
             
-           let dist = distancefromCentre(point: location)
+            let dist = distancefromCentre(point: location)
             print("dist is \(dist)")
             print("outerRadius is \(outerRadius!)")
             print("innerradius is \(innerRadius!)")
             if (dist < outerRadius! && dist > innerRadius!)
             {
-            let dx = location.x - myView!.center.x
-            let dy = location.y - myView!.center.y
-            // Store angle
+                let dx = location.x - myView!.center.x
+                let dy = location.y - myView!.center.y
+                // Store angle
                 
-            RotationController.startingAngle = atan2(dy, dx)
+                RotationController.startingAngle = atan2(dy, dx)
                 
-            startTransform = myView!.transform
-                
+                startTransform = myView!.transform
+                flag = true
+            }else {
+                print("not in view")
+                flag = false
             }
-        flag = false
+          
         }
-  
+        
     }
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-      
+        
         
         for touch in touches{
             let location = touch.location(in:myView?.superview)
             
-            let dist = distancefromCentre(point: location)
-            
-            if (dist < outerRadius! && dist > innerRadius!)
+            if (flag)
             {
-            let radians = atan2f(Float(myView!.transform.b), Float(myView!.transform.a))
-            
-            print("rad =\(Double(radians).rounded(toPlaces: 1))")
-
-            updateLabel(radian: Double(radians).rounded(toPlaces: 1))
-           
-            
-           // if myView.isMember(of: MinuteCircle.self){
-            let dx = location.x - myView!.center.x
-            let dy = location.y - myView!.center.y
-            
-            let angle = atan2(dy, dx)
-            angleDifference = RotationController.startingAngle! - angle
-            
-           
-            myView!.transform = CGAffineTransform(rotationAngle: -angleDifference!).concatenating(startTransform!)
-           
-         
-           }
-                }
-      
+                let radians = atan2f(Float(myView!.transform.b), Float(myView!.transform.a))
+                
+                print("rad =\(Double(radians).rounded(toPlaces: 1))")
+                
+                updateLabel(radian: Double(radians).rounded(toPlaces: 1))
+                
+                
+                // if myView.isMember(of: MinuteCircle.self){
+                let dx = location.x - myView!.center.x
+                let dy = location.y - myView!.center.y
+                
+                let angle = atan2(dy, dx)
+                angleDifference = RotationController.startingAngle - angle
+                
+                
+                myView!.transform = CGAffineTransform(rotationAngle: -angleDifference!).concatenating(startTransform!)
+                
+                
+            }
+            else {
+                print("moved error")
+            }
+        }
+        
     }
     
     func distancefromCentre(point:CGPoint) -> CGFloat
@@ -151,13 +153,13 @@ class RotationController: UIGestureRecognizer
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-       startTransform = myView!.transform
+        startTransform = myView!.transform
         //        RotationController.startingAngle = nil
-       // flag = true
-       // print("ended \(flag)")
+        // flag = true
+        // print("ended \(flag)")
     }
-
- 
+    
+    
     func updateLabel(radian : Double)
     {
         print("inisde updatefnc")
@@ -175,7 +177,7 @@ class RotationController: UIGestureRecognizer
     }
     
     
- 
+    
     
     
 }
