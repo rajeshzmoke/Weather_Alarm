@@ -15,7 +15,7 @@ class PowerButton: UIView
     let setButton = UIButton()
     static let timeLabel = UILabel()
     static let time2Label = UILabel()
-    let ampmButton = UIButton()
+    let ampmButton = ButtonProp()
     var oN = false
     
     override init(frame: CGRect)
@@ -27,12 +27,14 @@ class PowerButton: UIView
         PowerButton.timeLabel.text = "- :"
         PowerButton.timeLabel.textColor = UIColor.white
         PowerButton.timeLabel.textAlignment  = .right
+        PowerButton.timeLabel.clipsToBounds = true
         self.addSubview(PowerButton.timeLabel)
         
         PowerButton.time2Label.backgroundColor = UIColor.hexStringToUIColor(hex: "#2385D9")
         PowerButton.time2Label.text = "0"
         PowerButton.time2Label.textColor = UIColor.white
         PowerButton.time2Label.textAlignment  = .center
+        PowerButton.time2Label.clipsToBounds = true
         self.addSubview(PowerButton.time2Label)
         
         
@@ -45,6 +47,7 @@ class PowerButton: UIView
         setButton.layer.shadowOpacity = 0.7
         setButton.layer.shadowRadius = 5
         setButton.layer.shadowColor = UIColor.black.cgColor
+        setButton.clipsToBounds = true
         self.addSubview(setButton)
         
         ampmButton.backgroundColor = UIColor.hexStringToUIColor(hex: "#2385D9")
@@ -53,8 +56,8 @@ class PowerButton: UIView
         ampmButton.setTitle("AM", for: .normal)
         ampmButton.setTitleColor(UIColor.white, for: .normal)
         ampmButton.showsTouchWhenHighlighted = true
-        //ampmButton.setTitle("PM", for: .highlighted)
-        ampmButton.addTarget(self, action: #selector(onClick), for: UIControlEvents.touchUpInside)
+        ampmButton.clipsToBounds = true
+        ampmButton.addTarget(self, action: #selector(togglePressed(button:)), for: UIControlEvents.touchUpInside)
         self.addSubview(ampmButton)
         
 
@@ -89,16 +92,15 @@ class PowerButton: UIView
         
         
     }
-    func onClick()
-    {
-        changeAmPm(bool: !oN)
-    }
     
-    func changeAmPm(bool:Bool)
+    func togglePressed(button: UIButton)
     {
-        oN = bool
+        let boolVal = ampmButton.toggle()
+        ampmButton.setAmPm(sender: button, bool: boolVal)
         
     }
+    
+    
 }
 
 

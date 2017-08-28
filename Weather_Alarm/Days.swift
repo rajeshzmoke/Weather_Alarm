@@ -35,16 +35,17 @@ class Days: UIView
        
         sunButton.backgroundColor = .clear
         sunButton.setTitle("Sun", for: .normal)
-        sunButton.titleLabel?.font = UIFont(name: "HelveticaNeue-Thin", size: 15)
+        sunButton.titleLabel?.font = UIFont(name: "HelveticaNeue", size: 15)
         sunButton.tag = 1
         sunButton.showsTouchWhenHighlighted = true
-        //sunButton.clipsToBounds = true
+        sunButton.clipsToBounds = true
         sunButton.addTarget(self, action: #selector(togglePressed(button:)), for: UIControlEvents.touchUpInside)
 
         monButton.backgroundColor = .clear
         monButton.tag = 2
         monButton.setTitle("Mon", for: .normal)
-        monButton.titleLabel?.font = UIFont(name: "HelveticaNeue-Thin", size: 15)
+        monButton.clipsToBounds = true
+        monButton.titleLabel?.font = UIFont(name: "HelveticaNeue", size: 15)
         monButton.showsTouchWhenHighlighted = true
         monButton.addTarget(self, action: #selector(togglePressed(button:)), for: UIControlEvents.touchUpInside)
 
@@ -52,36 +53,41 @@ class Days: UIView
         tueButton.backgroundColor = .clear
         tueButton.tag = 3
         tueButton.setTitle("Tue", for: .normal)
-        tueButton.titleLabel?.font = UIFont(name: "HelveticaNeue-Thin", size: 15)
+        tueButton.titleLabel?.font = UIFont(name: "HelveticaNeue", size: 15)
         tueButton.showsTouchWhenHighlighted = true
+        tueButton.clipsToBounds = true
         tueButton.addTarget(self, action: #selector(togglePressed(button:)), for: UIControlEvents.touchUpInside)
         
         wedButton.backgroundColor = .clear
         wedButton.tag = 4
         wedButton.showsTouchWhenHighlighted = true
-        wedButton.titleLabel?.font = UIFont(name: "HelveticaNeue-Thin", size: 15)
+        wedButton.titleLabel?.font = UIFont(name: "HelveticaNeue", size: 15)
         wedButton.setTitle("Wed", for: .normal)
+        wedButton.clipsToBounds = true
         wedButton.addTarget(self, action: #selector(togglePressed(button:)), for: UIControlEvents.touchUpInside)
         
         thurButton.backgroundColor = .clear
         thurButton.tag = 5
-        thurButton.titleLabel?.font = UIFont(name: "HelveticaNeue-Thin", size: 15)
+        thurButton.titleLabel?.font = UIFont(name: "HelveticaNeue", size: 15)
         thurButton.setTitle("Thu", for: .normal)
         thurButton.showsTouchWhenHighlighted = true
+        thurButton.clipsToBounds = true
         thurButton.addTarget(self, action: #selector(togglePressed(button:)), for: UIControlEvents.touchUpInside)
         
         friButton.backgroundColor = .clear
         friButton.tag = 6
-        friButton.titleLabel?.font = UIFont(name: "HelveticaNeue-Thin", size: 15)
+        friButton.titleLabel?.font = UIFont(name: "HelveticaNeue", size: 15)
         friButton.setTitle("Fri", for: .normal)
         friButton.showsTouchWhenHighlighted = true
+        friButton.clipsToBounds = true
         friButton.addTarget(self, action: #selector(togglePressed(button:)), for: UIControlEvents.touchUpInside)
         
         satButton.backgroundColor = .clear
         satButton.tag = 7
-        satButton.titleLabel?.font = UIFont(name: "HelveticaNeue-Thin", size: 15)
+        satButton.titleLabel?.font = UIFont(name: "HelveticaNeue", size: 15)
         satButton.setTitle("Sat", for: .normal)
         satButton.showsTouchWhenHighlighted = true
+        satButton.clipsToBounds = true
         satButton.addTarget(self, action: #selector(togglePressed(button:)), for: UIControlEvents.touchUpInside)
         
         //
@@ -139,53 +145,53 @@ class Days: UIView
         let buttonsize  = self.bounds.size.width*0.14
         
         //sunday
-        sunView.bounds = CGRect(x: 0.0, y: 0.0, width: buttonsize*0.7, height: buttonsize*0.7)
+        sunView.bounds = CGRect(x: 0.0, y: 0.0, width: buttonsize*0.8, height: buttonsize*0.8)
         sunView.center = CGPoint(x: self.bounds.size.width*0.1, y: self.bounds.size.height*0.5)
       
         sunButton.bounds = CGRect(x: 0.0, y: 0.0, width:buttonsize , height:buttonsize)
         sunButton.center = CGPoint(x: sunView.bounds.size.width*0.5 , y: sunView.bounds.size.height*0.5)
         
         //monday
-        monView.bounds = CGRect(x: 0.0, y: 0.0, width: buttonsize*0.5, height: buttonsize)
-        monView.center = CGPoint(x: self.bounds.size.width*0.12, y: self.bounds.size.height*0.42)
+        monView.bounds = CGRect(x: 0.0, y: 0.0, width: buttonsize*0.8, height: buttonsize*0.8)
+        monView.center = CGPoint(x: self.bounds.size.width*0.13, y: self.bounds.size.height*0.415)
         
         monButton.bounds = CGRect(x: 0.0, y: 0.0, width: buttonsize, height: buttonsize)
         monButton.center = CGPoint(x: monView.bounds.size.width*0.5, y: monView.bounds.size.height*0.5)
         
         //tuesday
-        tueView.bounds = CGRect(x: 0.0, y: 0.0, width: buttonsize*0.05, height: buttonsize)
-        tueView.center = CGPoint(x: self.bounds.size.width*0.2, y: self.bounds.size.height*0.34)
+        tueView.bounds = CGRect(x: 0.0, y: 0.0, width: buttonsize*0.8, height: buttonsize*0.8)
+        tueView.center = CGPoint(x: self.bounds.size.width*0.22, y: self.bounds.size.height*0.336)
         
         tueButton.bounds = CGRect(x: 0.0, y: 0.0, width: buttonsize, height: buttonsize)
         tueButton.center = CGPoint(x: tueView.bounds.size.width*0.4, y: tueView.bounds.size.height*0.5)
         
         //wednesday
-        wedView.bounds = CGRect(x: 0.0 ,y: 0.0, width: buttonsize, height: buttonsize*0.4)
-        wedView.center = CGPoint(x: self.bounds.size.width*0.35, y: self.bounds.size.height*0.285)
+        wedView.bounds = CGRect(x: 0.0 ,y: 0.0, width: buttonsize*0.8, height: buttonsize*0.8)
+        wedView.center = CGPoint(x: self.bounds.size.width*0.36, y: self.bounds.size.height*0.285)
         
         wedButton.bounds = CGRect(x: 0.0 ,y: 0.0, width: buttonsize, height: buttonsize)
-        wedButton.center = CGPoint(x: wedView.bounds.size.width*0.4, y: wedView.bounds.size.height*0.5)
+        wedButton.center = CGPoint(x: wedView.bounds.size.width*0.4, y: wedView.bounds.size.height*0.55)
         
         //thursday
-        thurView.bounds = CGRect(x: 0.0 ,y: 0.0 , width: buttonsize*0.7, height: buttonsize*0.7)
-        thurView.center = CGPoint(x: self.bounds.size.width*0.525, y: self.bounds.size.height*0.28)
+        thurView.bounds = CGRect(x: 0.0 ,y: 0.0 , width: buttonsize*0.8, height: buttonsize*0.8)
+        thurView.center = CGPoint(x: self.bounds.size.width*0.525, y: self.bounds.size.height*0.275)
         
         thurButton.bounds = CGRect(x: 0.0 ,y: 0.0 , width: buttonsize, height: buttonsize)
         thurButton.center = CGPoint(x: thurView.bounds.size.width*0.4, y: thurView.bounds.size.height*0.5)
         
         //friday
-        friView.bounds = CGRect(x: 0.0 ,y: 0.0 , width: buttonsize*0.6, height: buttonsize)
-        friView.center = CGPoint(x: self.bounds.size.width*0.68, y: self.bounds.size.height*0.29)
+        friView.bounds = CGRect(x: 0.0 ,y: 0.0 , width: buttonsize*0.8, height: buttonsize*0.8)
+        friView.center = CGPoint(x: self.bounds.size.width*0.68, y: self.bounds.size.height*0.3)
         
         friButton.bounds = CGRect(x: 0.0 ,y: 0.0 , width: buttonsize, height: buttonsize)
         friButton.center = CGPoint(x: friView.bounds.size.width*0.4, y: friView.bounds.size.height*0.5)
         
         //Saturday
-        satView.bounds = CGRect(x: 0.0 ,y: 0.0, width: buttonsize*0.2, height: buttonsize)
-        satView.center = CGPoint(x: self.bounds.size.width*0.81, y: self.bounds.size.height*0.355)
+        satView.bounds = CGRect(x: 0.0 ,y: 0.0, width: buttonsize*0.8, height: buttonsize*0.8)
+        satView.center = CGPoint(x: self.bounds.size.width*0.8, y: self.bounds.size.height*0.35)
         
         satButton.bounds = CGRect(x: 0.0 ,y: 0.0, width: buttonsize, height: buttonsize)
-        satButton.center = CGPoint(x: satView.bounds.size.width*0.3, y: satView.bounds.size.height*0.35)
+        satButton.center = CGPoint(x: satView.bounds.size.width*0.5, y: satView.bounds.size.height*0.5)
 
        
     }

@@ -32,4 +32,9 @@ class ButtonProp : UIButton
         
     }
     
+    
+    func setAmPm(sender:UIButton, bool:Bool)   {
+        let title = bool ? "AM" : "PM"
+        sender.setTitle(title, for: .normal)
+    }
 }

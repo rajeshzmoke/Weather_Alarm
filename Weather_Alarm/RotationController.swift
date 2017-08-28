@@ -171,9 +171,18 @@ class RotationController: UIGestureRecognizer
         else
         {
             if myView!.isMember(of: HourCircle.self){
-                PowerButton.timeLabel.text = "\(arr[radian] ?? 000) :"
-            }else{
-            PowerButton.time2Label.text = "\(arr[radian]!*5 ?? 0000)"
+                PowerButton.time2Label.text = "\(arr[radian] ?? 000) :"
+            }else
+            {
+                if(arr[radian]!*5 == 60)
+                {
+                     PowerButton.timeLabel.text = "00"
+                }
+                else
+                {
+                     PowerButton.timeLabel.text = "\(arr[radian]!*5 )"
+                }
+           
             }
         }
         
