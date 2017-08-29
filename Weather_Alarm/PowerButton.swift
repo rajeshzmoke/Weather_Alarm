@@ -18,6 +18,9 @@ class PowerButton: UIView
     let ampmButton = ButtonProp()
     var oN = false
     
+    var days = Days()
+    var buttonArr = [ButtonProp]()
+    
     override init(frame: CGRect)
     {
         super.init(frame: frame)
@@ -39,7 +42,7 @@ class PowerButton: UIView
         
         
         setButton.showsTouchWhenHighlighted = true
-//        setButton.setTitle("Set", for: .normal)
+
 //        setButton.setTitleColor(UIColor.white, for: .normal)
         setButton.setImage(#imageLiteral(resourceName: "power"), for: .normal)
         setButton.contentMode = UIViewContentMode.scaleAspectFit
@@ -48,6 +51,7 @@ class PowerButton: UIView
         setButton.layer.shadowRadius = 5
         setButton.layer.shadowColor = UIColor.black.cgColor
         setButton.clipsToBounds = true
+       
         self.addSubview(setButton)
         
         ampmButton.backgroundColor = UIColor.hexStringToUIColor(hex: "#2385D9")
@@ -100,6 +104,7 @@ class PowerButton: UIView
         
     }
     
+   
     
 }
 

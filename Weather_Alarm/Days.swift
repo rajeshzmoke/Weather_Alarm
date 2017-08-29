@@ -201,37 +201,37 @@ class Days: UIView
         if button == sunButton
         {
           let boolVal = sunButton.toggle()
-         sunButton.setDayColor(sender: button, bool: boolVal, layer: Shapes.sunLayer)
+         sunButton.setDayColor(sender: button, bool: boolVal, layer: Shapes.sunLayer, btnTitle: "S")
         }
         else if button == monButton
         {
             let boolVal = monButton.toggle()
-          monButton.setDayColor(sender: button, bool: boolVal, layer: Shapes.monLayer)
+          monButton.setDayColor(sender: button, bool: boolVal, layer: Shapes.monLayer, btnTitle: "Mon")
         }
         else if button == tueButton
         {
             let boolVal = tueButton.toggle()
-           tueButton.setDayColor(sender: button, bool: boolVal, layer: Shapes.tueLayer)
+           tueButton.setDayColor(sender: button, bool: boolVal, layer: Shapes.tueLayer, btnTitle: "Tue")
         }
         else if button == wedButton
         {
             let boolVal = wedButton.toggle()
-           wedButton.setDayColor(sender: button, bool: boolVal, layer: Shapes.wedLayer)
+           wedButton.setDayColor(sender: button, bool: boolVal, layer: Shapes.wedLayer, btnTitle: "Wed")
         }
         else if button == thurButton
         {
             let boolVal = thurButton.toggle()
-            thurButton.setDayColor(sender: button, bool: boolVal, layer: Shapes.thuLayer)
+            thurButton.setDayColor(sender: button, bool: boolVal, layer: Shapes.thuLayer, btnTitle: "Thu")
         }
         else if button == friButton
         {
             let boolVal = friButton.toggle()
-            friButton.setDayColor(sender: button, bool: boolVal, layer: Shapes.friLayer)
+            friButton.setDayColor(sender: button, bool: boolVal, layer: Shapes.friLayer, btnTitle: "Fri")
         }
         else if button == satButton
         {
             let boolVal = satButton.toggle()
-            satButton.setDayColor(sender: button, bool: boolVal, layer: Shapes.satLayer)
+            satButton.setDayColor(sender: button, bool: boolVal, layer: Shapes.satLayer, btnTitle: "Sat")
         }
 
     }

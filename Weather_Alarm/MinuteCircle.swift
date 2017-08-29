@@ -11,16 +11,8 @@ import UIKit
 class MinuteCircle: UIView
 {
     var instanceMn:String = "Minute"
-    var startTransform = CGAffineTransform()
- 
-   
-    var timeArr = [Double: Int]()
-    var count = 0
-    
-    var arr : [Double : Int]!
-    
- 
-    
+
+
     override func draw(_ rect: CGRect)
     {
  
@@ -29,9 +21,7 @@ class MinuteCircle: UIView
      let rad = self.frame.size.width*0.51//radius*
         ClockFace.secondMarkers(ctx: ctx1!, x: rect.midX, y: rect.midY, radius: rad, sides: 60, color: UIColor.white)
         ClockFace.drawMinuteText(rect: rect, ctx: ctx1!, x: rect.midX, y: rect.midY, radius: rad, sides: 12, color: UIColor.white)
-        
-      
-        
+
     }
 
     

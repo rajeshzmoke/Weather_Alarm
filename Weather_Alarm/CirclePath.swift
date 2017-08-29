@@ -8,6 +8,14 @@
 
 import UIKit
 
+extension Double {
+    /// Rounds the double to decimal places value
+    func rounded(toPlaces places:Int) -> Double {
+        let divisor = pow(10.0, Double(places))
+        return (self * divisor).rounded() / divisor
+    }
+}
+
 class CirclePath: UIView {
     
     var minCircle = MinuteCircle()
@@ -26,14 +34,22 @@ class CirclePath: UIView {
     var timeArr = [Double: Int]()
     var count = 0
     var arr : [Double : Int]!
+    var viewArray = [UIView]()
+     var someInt = 0
+    
+    var alertMsg = ""
+    
     
     override init(frame: CGRect)
     {
         super.init(frame: frame)
         
-        
        
-       
+
+        minCircle.backgroundColor = UIColor.hexStringToUIColor(hex: "#1E282A")
+        minCircle.clipsToBounds = true
+        addSubview(minCircle)
+        viewArray.append(minCircle)
         
         shapes.backgroundColor = .clear
         addSubview(shapes)
@@ -42,10 +58,7 @@ class CirclePath: UIView {
         days.clipsToBounds = true
         addSubview(days)
 
-        minCircle.backgroundColor = UIColor.hexStringToUIColor(hex: "#1E282A")
-        minCircle.clipsToBounds = true
-        
-        addSubview(minCircle)
+       
         
         hourCircle.backgroundColor = UIColor.hexStringToUIColor(hex: "#424D4F")
         hourCircle.clipsToBounds = true
@@ -69,14 +82,15 @@ class CirclePath: UIView {
     }
     
     
-    override func layoutSubviews() {
+    override func layoutSubviews()
+    {
         super.layoutSubviews()
         
-        if flag == true
-        {
-            if UIDevice.current.orientation.isPortrait
-            {
-                print("portrait")
+//        if flag == true
+//        {
+//            if UIDevice.current.orientation.isPortrait
+//            {
+//                print("portrait")
                 minCircle.bounds = CGRect(x:0.0 , y: 0.0, width: self.bounds.size.width*0.66, height: self.bounds.size.width*0.66)
                 minCircle.center = CGPoint(x: self.bounds.size.width*0.5, y: self.bounds.size.height*0.5)
                 minCircle.layer.cornerRadius = minCircle.bounds.size.width*0.5
@@ -100,57 +114,37 @@ class CirclePath: UIView {
                 returnButton.center = CGPoint(x: self.bounds.size.width*0.15, y: self.bounds.size.height*0.65)
                 returnButton.layer.cornerRadius = returnButton.bounds.size.width*0.5
                 
-            }
-            else if UIDevice.current.orientation.isLandscape
-            {
-                print("landscape")
-                minCircle.bounds = CGRect(x:0.0 , y: 0.0, width: self.bounds.size.height*0.66, height: self.bounds.size.height*0.66)
-                minCircle.center = self.center
-                // CGPoint(x: self.frame.size.width*0.5, y: self.frame.size.height*0.5)
-                minCircle.layer.cornerRadius = minCircle.bounds.size.height*0.5
-                
-                hourCircle.bounds = CGRect(x: 0.0, y: 0, width: self.bounds.size.height*0.45, height: self
-                    .bounds.size.height*0.45)
-                hourCircle.center = CGPoint(x: self.bounds.size.width*0.5, y: self.bounds.size.height*0.5)
-                hourCircle.layer.cornerRadius = hourCircle.bounds.size.height*0.5
-                
-                powerButton.bounds = CGRect(x: 0.0, y: 0.0, width: self.bounds.size.height*0.2, height:self.bounds.size.height*0.2)
-                powerButton.center = CGPoint(x: self.bounds.size.width*0.5, y: self.bounds.size.height*0.5)
-                
-                
-                days.bounds = CGRect(x: 0.0, y: 0.0, width: self.bounds.size.width, height: self.bounds.size.height)
-                days.center = CGPoint(x: self.bounds.size.width*0.5, y: self.bounds.size.height*0.5)
-                
-                shapes.bounds = CGRect(x: 0.0, y: 0.0, width: self.bounds.size.width, height: self.bounds.size.height)
-                shapes.center = CGPoint(x: self.bounds.size.width*0.5, y: self.bounds.size.height*0.5)
-                
-                returnButton.bounds = CGRect(x: 0.0, y: 0.0, width: self.bounds.size.width*0.15, height: self.bounds.size.width*0.15)
-                returnButton.center = CGPoint(x: self.bounds.size.width*0.15, y: self.bounds.size.height*0.65)
-                returnButton.layer.cornerRadius = returnButton.bounds.size.width*0.5
-            }
-            
-        }
-        
-        //days.contentMode = UIViewContentMode.redraw
+//            }
+//            else if UIDevice.current.orientation.isLandscape
+//            {
+//                print("landscape")
+//                minCircle.bounds = CGRect(x:0.0 , y: 0.0, width: self.bounds.size.height*0.66, height: self.bounds.size.height*0.66)
+//                minCircle.center = self.center
+//                // CGPoint(x: self.frame.size.width*0.5, y: self.frame.size.height*0.5)
+//                minCircle.layer.cornerRadius = minCircle.bounds.size.height*0.5
+//                
+//                hourCircle.bounds = CGRect(x: 0.0, y: 0, width: self.bounds.size.height*0.45, height: self
+//                    .bounds.size.height*0.45)
+//                hourCircle.center = CGPoint(x: self.bounds.size.width*0.5, y: self.bounds.size.height*0.5)
+//                hourCircle.layer.cornerRadius = hourCircle.bounds.size.height*0.5
+//                
+//                powerButton.bounds = CGRect(x: 0.0, y: 0.0, width: self.bounds.size.height*0.2, height:self.bounds.size.height*0.2)
+//                powerButton.center = CGPoint(x: self.bounds.size.width*0.5, y: self.bounds.size.height*0.5)
+//                
+//                
+//                days.bounds = CGRect(x: 0.0, y: 0.0, width: self.bounds.size.width, height: self.bounds.size.height)
+//                days.center = CGPoint(x: self.bounds.size.width*0.5, y: self.bounds.size.height*0.5)
+//                
+//                shapes.bounds = CGRect(x: 0.0, y: 0.0, width: self.bounds.size.width, height: self.bounds.size.height)
+//                shapes.center = CGPoint(x: self.bounds.size.width*0.5, y: self.bounds.size.height*0.5)
+//                
+//                returnButton.bounds = CGRect(x: 0.0, y: 0.0, width: self.bounds.size.width*0.15, height: self.bounds.size.width*0.15)
+//                returnButton.center = CGPoint(x: self.bounds.size.width*0.15, y: self.bounds.size.height*0.65)
+//                returnButton.layer.cornerRadius = returnButton.bounds.size.width*0.5
+////            }
+//        }
     }
-    
-    override func draw(_ rect: CGRect)
-    {
-     
-        
-        
-//        let r1 = RotationController(myView: minCircle, innerRadius: (self.bounds.width*0.45)*0.5, outerRadius: (minCircle.bounds.size.width/2), instanceRef: "Minute", target: self, action:nil)
-        // #selector(testGesture(recognizer:)))
-       // self.addGestureRecognizer(r1)
-        //r1.cancelsTouchesInView = false
-        
-//        let r2 = RotationController(myView: hourCircle, innerRadius: (self.bounds.size.width*0.25)*0.5, outerRadius: hourCircle.bounds.size.width/2, instanceRef: "Hour", target: self, action:nil)
-        //#selector(testGesture(recognizer:)))
-        //self.addGestureRecognizer(r2)
-        //r2.cancelsTouchesInView = false
-        
-    }
-    
+  
     func getMyValues() -> [Double:Int]
     {
         
@@ -175,38 +169,43 @@ class CirclePath: UIView {
 
     
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
+    {
         
         for firsttouch in touches {
             if firsttouch == touches.first!{
-            if firsttouch.view == minCircle{
-                print("mincircle touched")
+                let location = firsttouch.location(in:self)
+
+               for myview in viewArray{
+                
+                if myview.frame.contains(location){
+//                if firsttouch.view == myview{
+                
                 flag1 = true
                 
                 startTransform = minCircle.transform
-            }else if firsttouch.view == hourCircle.self{
-                print("hourcircle touched")
+                }
+            }
+                if firsttouch.view == hourCircle.self{
+                
                 flag1 = false
                 
                 startTransform = hourCircle.transform
-            }
-            
-            let location = firsttouch.location(in:self)
-
+                }
+                else {
+                    
+                }
                 let dx = location.x - self.center.x
                 let dy = location.y - self.center.y
                 // Store angle
                 
-                RotationController.startingAngle = atan2(dy, dx)
-                
-                
-            
-            }
+                CirclePath.startingAngle = atan2(dy, dx)
+             }
         }
-        
     }
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?)
+    {
         for firsttouch in touches {
 //         if firsttouch == touches.first!{
             let location = firsttouch.location(in:self)
@@ -214,7 +213,7 @@ class CirclePath: UIView {
             let dy = location.y - self.center.y
             
             let angle = atan2(dy, dx)
-            angleDifference = RotationController.startingAngle - angle
+            angleDifference = CirclePath.startingAngle! - angle
             
 //            if firsttouch.view == minCircle || flag1 == true
 //            {
@@ -238,38 +237,28 @@ class CirclePath: UIView {
             
             
                 
-            if (flag1 == true && firsttouch.view == minCircle)
+            if (flag1 == true)
             {
                 let radians = atan2f(Float(minCircle.transform.b), Float(minCircle.transform.a))
-                
-                print("rad =\(Double(radians).rounded(toPlaces: 1))")
-                
                 updateMinuteLabel(radian: Double(radians).rounded(toPlaces: 1))
-
-                print("mincircle rotated")
                 minCircle.transform = CGAffineTransform(rotationAngle: -angleDifference!).concatenating(startTransform)
                 
             }
             else if (flag1 != true && firsttouch.view == hourCircle)
             {
                 let radians = atan2f(Float(hourCircle.transform.b), Float(hourCircle.transform.a))
-                
-                //print("rad =\(Double(radians).rounded(toPlaces: 1))")
-                
                 updateHourLabel(radian: Double(radians).rounded(toPlaces: 1))
-                print("Hourcircle rotated")
                 hourCircle.transform = CGAffineTransform(rotationAngle: -angleDifference!).concatenating(startTransform)
             }
 //        }
         }
     }
     
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?)
+    {
         //startTransform = self.transform
-        //        RotationController.startingAngle = nil
+        //RotationController.startingAngle = nil
         flag1 = nil
-        // print("ended \(flag)")
-        
     }
     
     func distancefromCentre(point:CGPoint) -> CGFloat
@@ -281,8 +270,18 @@ class CirclePath: UIView {
         
     }
     
- 
-    
+//    override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
+//        //print("passing touches to the mincircle")
+//        for view in subviews{
+//            if !view.isHidden && view.point(inside: minCircle.convert(point, to: view), with: event){
+//                print("returned true in func point")
+//                flag1 = true
+//                return true
+//            }
+//        }
+//        return false
+//    }
+
     
     func updateMinuteLabel(radian : Double)
     {
@@ -310,82 +309,61 @@ class CirclePath: UIView {
     
     func updateHourLabel(radian : Double)
     {
-        
-        
         if arr.index(forKey: radian) == nil {
-            // print("the key 'someKey' is NOT in the dictionary")
+
         }
         else
         {
-            
                 PowerButton.timeLabel.text = "\(arr[radian] ?? 000) :"
-            
             }
-        }
-        
-        
-    }
-
-
-    
-    
-    
-    
-    
-    func testGesture(recognizer:RotationController){
-        if let angle = recognizer.angleDifference {
-            
-            // angle is the absolute angle for the current gesture in radians
-            
-            print("Angle \(angle)")
-            //self.minCircle.transform = CGAffineTransform(rotationAngle: -angle).concatenating(recognizer.startTransform!)
-            
-            //                    if recognizer.instanceRef == "Minute"
-            //                    {
-            //
-            //                        self.minCircle.transform = CGAffineTransform(rotationAngle: angle)
-            //                    }
-            //                    else if recognizer.instanceRef == "Hour"
-            //                    {
-            //                        self.hourCircle.transform = CGAffineTransform(rotationAngle: angle)
-            //                    }
-        }
-        
     }
     
-    
-
-
-
-
-
-
-//  func rotateGesture(recognizer:XMCircleGestureRecognizer){
-//        if let angle = recognizer.angle {
-//
-//            // angle is the absolute angle for the current gesture in radians
-//
-//            print("Angle \(angle)")
-//
-//            if recognizer.instanceRef == "Minute"
-//            {
-//
-//                self.minCircle.transform = CGAffineTransform(rotationAngle: angle)
-//            }
-//            else if recognizer.instanceRef == "Hour"
-//            {
-//                self.hourCircle.transform = CGAffineTransform(rotationAngle: angle)
-//            }
+//    func setAlarm()
+//    {
+//       let buttonArr = [days.sunButton, days.monButton, days.tueButton, days.wedButton, days.thurButton, days.friButton, days.satButton]
+//        
+//        
+//        let hour = (PowerButton.timeLabel.text ?? "00")
+//        let min = (PowerButton.time2Label.text ?? "00")
+//        
+//        var time = ""
+//        if powerButton.ampmButton.isOn
+//        {
+//            time = "AM"
 //        }
-//        if let distance = recognizer.distance {
-////                        print("Distance \(distance)")
-//                        // distance is the absolute distance from the midPoint
-//                    }
-//        if let rotation = recognizer.rotation {
-//            //            print("Rotaion \(rotation)")
-//            //            // rotation is the relative rotation for the current gesture in radians
-//            //
-//                    }
+//        else{
+//            time = "PM"
+//        }
+//        
+//        
+//        var alarmMsg = "\(hour) \(min) \(time) \n"
+//        
+//        for btn in buttonArr {
+//            if btn.btnSelected {
+//                if let sel = btn.titleLabel?.text
+//                {
+//                   alarmMsg += "\(sel) "
+//                }
+//            }
+//            else{
+//                
+//            }
+//            
+//        }
+//        
+//        
+//        print(alarmMsg)
+//        
+//        //alertMsg = alarmMsg
+//    }
+
+    
+        
+    }
+
+
+
+
 
 
 

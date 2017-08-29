@@ -23,7 +23,6 @@
 		0CAFAFE91F39E08F007EBB26 /* BaseCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAFAFE81F39E08F007EBB26 /* BaseCircle.swift */; };
 		7F199DC51F4E9AAF004D24A6 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F199DC41F4E9AAF004D24A6 /* Test.swift */; };
 		7F6446E81F3DB9C50044B58E /* ReturnButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6446E71F3DB9C50044B58E /* ReturnButton.swift */; };
-		7F7618EE1F3C3708005BE6AC /* XMCircleGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7618ED1F3C3708005BE6AC /* XMCircleGestureRecognizer.swift */; };
 		7F7618F01F3C373C005BE6AC /* ClockFace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7618EF1F3C373C005BE6AC /* ClockFace.swift */; };
 		7F7618F21F3C375C005BE6AC /* CirclePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7618F11F3C375C005BE6AC /* CirclePath.swift */; };
 		7F7618F41F3C3763005BE6AC /* MinuteCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7618F31F3C3763005BE6AC /* MinuteCircle.swift */; };
@@ -31,7 +30,7 @@
 		7F7618F81F3C376A005BE6AC /* Days.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7618F71F3C376A005BE6AC /* Days.swift */; };
 		7F7618FA1F3C376F005BE6AC /* PowerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7618F91F3C376F005BE6AC /* PowerButton.swift */; };
 		7F859F351F459513006E0A9C /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F859F341F459513006E0A9C /* UIButtonExtension.swift */; };
-		7F8D52B01F4BF9440061256B /* RotationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8D52AF1F4BF9440061256B /* RotationController.swift */; };
+		7F8C81301F5530F5000C303C /* RotationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8C812F1F5530F5000C303C /* RotationController.swift */; };
 		7FF0C3291F3C6BF900D226EA /* Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF0C3281F3C6BF900D226EA /* Shapes.swift */; };
 /* End PBXBuildFile section */
 
@@ -75,7 +74,6 @@
 		0CAFAFE81F39E08F007EBB26 /* BaseCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCircle.swift; sourceTree = "<group>"; };
 		7F199DC41F4E9AAF004D24A6 /* Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		7F6446E71F3DB9C50044B58E /* ReturnButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReturnButton.swift; sourceTree = "<group>"; };
-		7F7618ED1F3C3708005BE6AC /* XMCircleGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XMCircleGestureRecognizer.swift; path = AlarmRotate/XMCircleGestureRecognizer.swift; sourceTree = "<group>"; };
 		7F7618EF1F3C373C005BE6AC /* ClockFace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockFace.swift; sourceTree = "<group>"; };
 		7F7618F11F3C375C005BE6AC /* CirclePath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CirclePath.swift; sourceTree = "<group>"; };
 		7F7618F31F3C3763005BE6AC /* MinuteCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinuteCircle.swift; sourceTree = "<group>"; };
@@ -83,7 +81,7 @@
 		7F7618F71F3C376A005BE6AC /* Days.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Days.swift; sourceTree = "<group>"; };
 		7F7618F91F3C376F005BE6AC /* PowerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PowerButton.swift; sourceTree = "<group>"; };
 		7F859F341F459513006E0A9C /* UIButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
-		7F8D52AF1F4BF9440061256B /* RotationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotationController.swift; sourceTree = "<group>"; };
+		7F8C812F1F5530F5000C303C /* RotationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotationController.swift; sourceTree = "<group>"; };
 		7FF0C3281F3C6BF900D226EA /* Shapes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shapes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,8 +115,8 @@
 			children = (
 				7F7618F11F3C375C005BE6AC /* CirclePath.swift */,
 				7F7618F31F3C3763005BE6AC /* MinuteCircle.swift */,
-				7F7618F51F3C3766005BE6AC /* HourCircle.swift */,
 				7FF0C3281F3C6BF900D226EA /* Shapes.swift */,
+				7F7618F51F3C3766005BE6AC /* HourCircle.swift */,
 				7F7618F71F3C376A005BE6AC /* Days.swift */,
 				7F7618F91F3C376F005BE6AC /* PowerButton.swift */,
 				7F6446E71F3DB9C50044B58E /* ReturnButton.swift */,
@@ -131,8 +129,7 @@
 			children = (
 				7F199DC41F4E9AAF004D24A6 /* Test.swift */,
 				7F7618EF1F3C373C005BE6AC /* ClockFace.swift */,
-				7F7618ED1F3C3708005BE6AC /* XMCircleGestureRecognizer.swift */,
-				7F8D52AF1F4BF9440061256B /* RotationController.swift */,
+				7F8C812F1F5530F5000C303C /* RotationController.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -354,7 +351,6 @@
 				7F7618F81F3C376A005BE6AC /* Days.swift in Sources */,
 				7F7618F61F3C3766005BE6AC /* HourCircle.swift in Sources */,
 				7F7618F01F3C373C005BE6AC /* ClockFace.swift in Sources */,
-				7F7618EE1F3C3708005BE6AC /* XMCircleGestureRecognizer.swift in Sources */,
 				7F7618FA1F3C376F005BE6AC /* PowerButton.swift in Sources */,
 				0CAFAFE71F39E04C007EBB26 /* Circle.swift in Sources */,
 				0CAFAFDE1F39DF6C007EBB26 /* TimerView.swift in Sources */,
@@ -364,8 +360,8 @@
 				7F7618F41F3C3763005BE6AC /* MinuteCircle.swift in Sources */,
 				7F6446E81F3DB9C50044B58E /* ReturnButton.swift in Sources */,
 				0CAFAFE31F39DFDA007EBB26 /* NSShadowExtension.swift in Sources */,
-				7F8D52B01F4BF9440061256B /* RotationController.swift in Sources */,
 				0CAFAFAA1F39DEF1007EBB26 /* AppDelegate.swift in Sources */,
+				7F8C81301F5530F5000C303C /* RotationController.swift in Sources */,
 				7F199DC51F4E9AAF004D24A6 /* Test.swift in Sources */,
 				0CAFAFE51F39E001007EBB26 /* Weather.swift in Sources */,
 				0C589D2B1F3B169E009F8A0F /* CGFloatExtension.swift in Sources */,

@@ -14,6 +14,7 @@ class ButtonProp : UIButton
 
     var isOn :Bool = false
     
+    var btnSelected = false
     func toggle() -> Bool
     {
         isOn = !isOn
@@ -21,15 +22,20 @@ class ButtonProp : UIButton
         
     }
     
-     func setDayColor(sender: UIButton, bool:Bool ,layer:CAShapeLayer)
+    func setDayColor(sender: UIButton, bool:Bool ,layer:CAShapeLayer ,btnTitle: String)
     {
         let color = bool ? UIColor.cyan.cgColor : UIColor.hexStringToUIColor(hex: "#16232B").cgColor
         let titleColor = bool ? UIColor.black : UIColor.white
         
         layer.strokeColor = color
+        sender.setTitle(btnTitle, for: UIControlState.selected)
         sender.setTitleColor(titleColor, for: .normal)
-        print("click = \(sender.tag)")
+//        print("click = \(sender.tag)")
         
+        if color == UIColor.cyan.cgColor
+        {
+            btnSelected = true
+        }
     }
     
     
