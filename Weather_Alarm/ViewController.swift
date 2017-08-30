@@ -107,6 +107,7 @@ class ViewController: UIViewController
         print(alarmMsg)
         
         printAlert(msg: alarmMsg)
+        alarmMsg = ""
     }
 
     
